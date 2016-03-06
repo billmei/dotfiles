@@ -1,8 +1,8 @@
 {
 	"extensions":
 	[
-		"yml"
+		"py"
 	],
-	"tab_size": 2,
+	"tab_size": 4,
 	"translate_tabs_to_spaces": true
 }
