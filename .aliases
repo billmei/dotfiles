@@ -6,8 +6,7 @@ alias gc="git checkout"
 alias branch="git checkout -b"
 alias commit="git add -A; git commit -m"
 alias gl="git log --decorate --graph --stat"
-alias dance="bundle install; rake db:migrate; npm install; rake assets:clobber; powder restart"
-alias update="git pull && dance"
+alias dance="bundle install; rake db:migrate; npm install; rake assets:clobber; powder restart; rm ./npm-debug.log"
 alias gp='git pull origin $(git symbolic-ref --short -q HEAD)'
 alias push='git push origin $(git symbolic-ref --short -q HEAD)'
 

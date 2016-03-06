@@ -49,7 +49,7 @@ complete -W "NSGlobalDomain" defaults;
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
-export PATH="$HOME/bin:$PATH;/opt/bin:$PATH;$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$HOME/bin:$PATH;/opt/bin:$PATH;$PATH:$HOME/.rvm/bin;$M2:$PATH" # Add RVM to PATH for scripting
 export GEM_HOME="$HOME/.gem"
 export GEM_PATH="$HOME/.gem"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
