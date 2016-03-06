@@ -1,0 +1,71 @@
+[
+	{
+		"keys": ["ctrl+shift+1"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 1.0],
+			"rows": [0.0, 1.0],
+			"cells": [[0, 0, 1, 1]]
+		}
+	},
+	{
+		"keys": ["ctrl+shift+2"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 0.5, 1.0],
+			"rows": [0.0, 1.0],
+			"cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+		}
+	},
+	{
+		"keys": ["ctrl+shift+3"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 0.33, 0.66, 1.0],
+			"rows": [0.0, 1.0],
+			"cells": [[0, 0, 1, 1], [1, 0, 2, 1], [2, 0, 3, 1]]
+		}
+	},
+	{
+		"keys": ["ctrl+shift+4"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 0.5, 1.0],
+			"rows": [0.0, 0.5, 1.0],
+			"cells":
+			[
+				[0, 0, 1, 1], [1, 0, 2, 1], [0, 1, 2, 2]
+			]
+		}
+	},
+	{
+		"keys": ["ctrl+shift+5"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 0.5, 1.0],
+			"rows": [0.0, 0.5, 1.0],
+			"cells":
+			[
+				[0, 0, 1, 1], [1, 0, 2, 1],
+				[0, 1, 1, 2], [1, 1, 2, 2]
+			]
+		}
+	},
+	{ "keys": ["super+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+	{ "keys": ["super+pageup"], "command": "prev_view" },
+	{ "keys": ["super+pagedown"], "command": "next_view" },
+	{ "keys": ["alt+up"], "command": "move", "args": {"by": "lines", "forward": false} },
+	{ "keys": ["alt+down"], "command": "move", "args": {"by": "lines", "forward": true} },
+	{ "keys": ["super+shift+up"], "command": "swap_line_up" },
+	{ "keys": ["super+shift+down"], "command": "swap_line_down" },
+	{ "keys": ["alt+backspace"], "command": "delete_word", "args": { "forward": false, "sub_words": true } },
+	{ "keys": ["alt+delete"], "command": "delete_word", "args": { "forward": true, "sub_words": true } },
+
+	{ "keys": ["super+shift+k"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+
+]

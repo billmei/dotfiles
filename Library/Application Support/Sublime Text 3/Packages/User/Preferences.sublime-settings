@@ -1,0 +1,42 @@
+{
+	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"file_exclude_patterns":
+	[
+		"*.sassc",
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace"
+	],
+	"folder_exclude_patterns":
+	[
+		"tmp",
+		"vendor",
+		"node_modules",
+		".svn",
+		".git",
+		".hg",
+		"CVS"
+	],
+	"font_size": 12,
+	"ignored_packages":
+	[
+		"Vintage"
+	]
+}
