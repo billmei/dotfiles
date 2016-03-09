@@ -5,5 +5,5 @@
 
 brew cask install google-chrome
 brew cask install ccleaner
-
+brew cask install dash
 
