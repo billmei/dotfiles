@@ -7,6 +7,7 @@
 # Cask files
 
 brew cask install google-chrome
+brew cask install iterm2
 brew cask install ccleaner
 brew cask install dash
 brew cask install the-unarchiver
