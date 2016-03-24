@@ -9,4 +9,5 @@
 brew cask install google-chrome
 brew cask install ccleaner
 brew cask install dash
-brew cask install virtualbox
+brew cask install the-unarchiver
+# brew cask install virtualbox
