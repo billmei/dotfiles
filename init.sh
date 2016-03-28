@@ -32,3 +32,13 @@ brew cask install the-unarchiver
 brew cask install firefox
 brew cask install skype
 # brew cask install virtualbox
+
+# Fonts
+brew tap caskroom/fonts
+brew cask install font-noto-sans
+brew cask install font-vollkorn
+brew cask install font-open-sans
+brew cask install font-source-sans-pro
+brew cask install font-computer-modern
+brew cask install font-comic-neue
+brew cask install font-montserrat
