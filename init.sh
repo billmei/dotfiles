@@ -31,4 +31,5 @@ brew cask install dash
 brew cask install the-unarchiver
 brew cask install firefox
 brew cask install skype
+brew cask install sketchbook
 # brew cask install virtualbox
