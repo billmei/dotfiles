@@ -11,6 +11,7 @@ brew install ant
 brew install ffmpeg
 brew install eigen
 brew install opencv
+brew install youtube-dl
 npm install -g gitjk
 
 # Cask files
