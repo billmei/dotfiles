@@ -3,6 +3,7 @@
 
 # Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+git config --file="$(brew --repository)/.git/config" --replace-all homebrew.analyticsdisabled true
 brew tap homebrew/science
 brew install wget
 brew install go
