@@ -1,5 +1,6 @@
 #!/bin/bash
 # Initialization for development on MacOS
+# Python 3, Ruby, and ES6.
 
 # Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
