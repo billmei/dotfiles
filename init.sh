@@ -35,6 +35,8 @@ brew cask install the-unarchiver
 brew cask install firefox
 brew cask install skype
 brew cask install gpgtools
+brew cask install flash
+brew cask install radiant-player
 # Veracrypt must be installed manually
 brew cask install osxfuse
 brew cask install sshfs
