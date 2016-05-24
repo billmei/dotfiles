@@ -52,3 +52,7 @@ brew cask install font-source-sans-pro
 brew cask install font-computer-modern
 brew cask install font-comic-neue
 brew cask install font-montserrat
+
+# Custom settings
+# Disable two-finger swipe back/forward navigation in Chrome
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool FALSE
