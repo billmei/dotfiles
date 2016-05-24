@@ -134,7 +134,7 @@ defaults write com.apple.finder AppleShowAllFiles -bool YES
 ## Always show the ~/Library folder
 chflags nohidden ~/Library
 
-## Always ahow the /Volumes folder
+## Always show the /Volumes folder
 sudo chflags nohidden /Volumes
 
 ## Save all screenshots to ~/Pictures/Screenshots instead of the Desktop
