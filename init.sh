@@ -39,9 +39,8 @@ brew cask install skype
 brew cask install gpgtools
 brew cask install flash
 brew cask install radiant-player
-# Veracrypt must be installed manually
-brew cask install osxfuse
-brew cask install sshfs
+brew tap trinitronx/homebrew-truecrypt
+brew cask install truecrypt
 # brew cask install virtualbox
 
 # Fonts
