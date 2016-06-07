@@ -90,5 +90,7 @@ for file in ~/.{path,exports,aliases,functions,extra}; do
 done;
 unset file;
 
+export HOMEBREW_NO_ANALYTICS=1
+
 export NVM_DIR="/Users/kortaggio/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
