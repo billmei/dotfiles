@@ -39,6 +39,7 @@ brew cask install skype
 brew cask install gpgtools
 brew cask install flash
 brew cask install radiant-player
+brew cask install unetbootin
 brew tap trinitronx/homebrew-truecrypt
 brew cask install truecrypt
 # brew cask install virtualbox
