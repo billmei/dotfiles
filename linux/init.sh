@@ -33,7 +33,7 @@ echo -e "${CYAN}(Press Enter to continue when prompted)${NC}"
 echo -e "${GREEN}==========================${NC}"
 # sublime text 3 from ppa: http://www.webupd8.org/2013/07/sublime-text-3-ubuntu-ppa-now-available.html
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
-sudo add-apt-repository ppa:kilian/f.lux
+sudo add-apt-repository ppa:nathan-renniewaldock/flux
 
 echo -e "${CYAN}Installing Heroku Toolbelt${NC}"
 echo -e "${CYAN}(Enter root password when prompted)${NC}"
