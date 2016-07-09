@@ -5,6 +5,12 @@ GREEN='\033[1;32m'
 CYAN='\033[1;36m'
 NC='\033[0m' # No Color
 
+# Google Chrome
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+sudo apt-get update
+sudo apt-get -y install google-chrome-stable
+
 # git
 echo -e "${CYAN}Enter the name you want to use to sign git commits${NC}"
 read gh_name
