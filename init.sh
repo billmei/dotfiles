@@ -15,7 +15,6 @@ brew install eigen
 brew install opencv
 brew install youtube-dl
 brew install gpg
-npm install -g gitjk
 
 # Cask files
 brew tap phinze/cask
@@ -53,6 +52,14 @@ brew cask install font-source-sans-pro
 brew cask install font-computer-modern
 brew cask install font-comic-neue
 brew cask install font-montserrat
+
+# NPM
+brew install node
+npm install -g npmlog
+npm install -g semver
+npm install -g rimraf
+npm install -g fsevents
+npm install -g gitjk
 
 # Custom settings
 ## Disable two-finger swipe back/forward navigation in Chrome
