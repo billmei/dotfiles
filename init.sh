@@ -54,12 +54,11 @@ brew cask install font-comic-neue
 brew cask install font-montserrat
 
 # NPM
-brew install node
+npm install -g gitjk
 npm install -g npmlog
 npm install -g semver
 npm install -g rimraf
 npm install -g fsevents
-npm install -g gitjk
 
 # Custom settings
 ## Disable two-finger swipe back/forward navigation in Chrome
