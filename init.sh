@@ -8,7 +8,6 @@ git config --file="$(brew --repository)/.git/config" --replace-all homebrew.anal
 brew tap homebrew/science
 brew install wget
 brew install go
-brew install node
 brew install ant
 brew install ffmpeg
 brew install eigen
@@ -54,6 +53,7 @@ brew cask install font-comic-neue
 brew cask install font-montserrat
 
 # NPM
+brew install node
 npm install -g gitjk
 npm install -g npmlog
 npm install -g semver
