@@ -2,6 +2,10 @@
 # Initialization for development on MacOS
 # Python 3, Ruby, and ES6.
 
+# Applications that have to be installed manually
+# Little Snitch https://www.obdev.at/products/littlesnitch/index.html
+# Giphy Capture https://itunes.apple.com/us/app/giphy-capture.-the-gif-maker/id668208984?mt=12
+
 # Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 git config --file="$(brew --repository)/.git/config" --replace-all homebrew.analyticsdisabled true
