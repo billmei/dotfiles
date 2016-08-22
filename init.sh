@@ -38,6 +38,7 @@ brew cask install dash
 brew cask install the-unarchiver
 brew cask install firefox
 brew cask install skype
+brew cask install anki
 brew cask install gpgtools
 brew cask install flash
 brew cask install radiant-player
