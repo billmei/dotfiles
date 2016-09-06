@@ -57,6 +57,9 @@ brew cask install font-computer-modern
 brew cask install font-comic-neue
 brew cask install font-montserrat
 
+# Python
+pip install awscli
+
 # NPM
 brew install node
 npm install -g gitjk
