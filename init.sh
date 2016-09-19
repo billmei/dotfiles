@@ -19,6 +19,25 @@ brew install opencv
 brew install youtube-dl
 brew install gpg
 
+# Python
+brew install python3
+pip install awscli
+## ML stuff
+pip3 install pandas
+pip3 install bs4
+pip3 install sklearn
+pip3 install numpy
+pip3 install scipy
+pip3 install requests && pip install requests
+pip3 install tensorflow
+pip3 install lxml
+pip3 install nltk
+pip3 install jupyter
+## Web dev stuff
+pip3 install flask
+pip3 install django
+pip3 install pylint && pip install pylint
+
 # Cask files
 brew tap phinze/cask
 brew install brew-cask
@@ -57,9 +76,6 @@ brew cask install font-computer-modern
 brew cask install font-comic-neue
 brew cask install font-montserrat
 
-# Python
-pip install awscli
-
 # NPM
 brew install node
 npm install -g gitjk
@@ -68,7 +84,7 @@ npm install -g semver
 npm install -g rimraf
 npm install -g fsevents
 
-# Custom settings
+# Custom OS X settings
 ## Disable two-finger swipe back/forward navigation in Chrome
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool FALSE
 
