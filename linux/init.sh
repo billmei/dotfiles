@@ -96,6 +96,10 @@ echo -e "${CYAN}Installing GIMP and Inkscape{NC}"
 echo -e "${GREEN}==========================${NC}"
 sudo apt-get -y install gimp inkscape
 
+echo -e "${CYAN}Installing Zeal{NC}"
+echo -e "${GREEN}==========================${NC}"
+sudo apt-get -y install zeal
+
 echo -e "${CYAN}Installing Calibre${NC}"
 echo -e "${GREEN}==========================${NC}"
 sudo -v && wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | sudo python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main()"
