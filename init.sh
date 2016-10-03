@@ -18,6 +18,7 @@ brew install eigen
 brew install opencv
 brew install youtube-dl
 brew install gpg
+brew install terminal-notifier
 
 # Python
 brew install python3
