@@ -1,6 +1,7 @@
-# Shortcuts
+# Git Shortcuts
 alias gs="git status"
 alias gd="git diff"
+alias gds="git diff --staged"
 alias gb="git branch"
 alias gc="git checkout"
 alias branch="git checkout -b"
@@ -70,6 +71,10 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 # Turn MySQL on and off
 alias mysqlon="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
 alias mysqloff="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+
+# Accept FTP connections on your local machine
+alias ftpon="launchctl load -w /System/Library/LaunchDaemons/ftp.plist"
+alias ftpoff="launchctl unload -w /System/Library/LaunchDaemons/ftp.plist"
 
 # Turn PostgreSQL on and off
 alias pgon="launchctl load -w /usr/local/opt/postgresql/homebrew.mxcl.postgresql.plist"
