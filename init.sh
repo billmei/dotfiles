@@ -84,6 +84,7 @@ npm install -g npmlog
 npm install -g semver
 npm install -g rimraf
 npm install -g fsevents
+npm install -g git-fire # 🔥
 
 # Custom OS X settings
 ## Disable two-finger swipe back/forward navigation in Chrome
