@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# use like: git pickaxe thing_you_are_searching_for /path/to/file
+git log -p -S $1 $2
