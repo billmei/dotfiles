@@ -26,6 +26,20 @@ function cdf() { # short for `cdfinder`
 	cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
 }
 
+# Create a notification when a given command is done
+# (requires terminal-notifier to be installed via Homebrew)
+function notify() {
+        cmd="$@"
+        eval $cmd
+        err_code=$?
+        if [[ $err_code -eq 0 ]]; then
+                terminal-notifier -message "Success ${err_code}: ${cmd}" -sound "Basso" -sender com.apple.Terminal
+        else
+                terminal-notifier -message "Failure ${err_code}: ${cmd}" -sound "Glass" -sender com.apple.Terminal
+        fi
+        return $err_code
+}
+
 # Create a .tar.gz archive, using `zopfli`, `pigz` or `gzip` for compression
 function targz() {
 	local tmpFile="${@%/}.tar";
