@@ -1,7 +1,5 @@
 # Git Shortcuts
 alias gs="git status"
-alias gd="git diff --color | diff-so-fancy | less --tabs=4 -RFX"
-alias gds="git diff --staged --color | diff-so-fancy | less --tabs=4 -RFX"
 alias gb="git branch"
 alias gc="git checkout"
 alias branch="git checkout -b"
@@ -9,6 +7,19 @@ alias commit="git add -A; git commit -m"
 alias gl="git log --decorate --graph --stat"
 alias pull='git pull origin $(git symbolic-ref --short -q HEAD)'
 alias push='git push -u origin $(git symbolic-ref --short -q HEAD)'
+
+# Interactive rebase with the given number of latest commits
+function rebase() {
+	git rebase -i HEAD~"$1";
+}
+
+function gd() {
+	git diff --color "$@" | diff-so-fancy | less --tabs=4 -RX
+}
+
+function gds() {
+	git diff --staged --color "$@" | diff-so-fancy | less --tabs=4 -RX
+}
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

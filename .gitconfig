@@ -101,7 +101,7 @@
 
 	# Use colors in Git commands that are capable of colored output when
 	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
-	ui = true
+	ui = always
 
 [color "branch"]
 
@@ -112,10 +112,11 @@
 [color "diff"]
 
 	meta = yellow bold
+	commit = green bold
 	frag = magenta bold # line info
 	old = red # deletions
 	new = green # additions
-
+	whitespace = red reverse
 
 [color "diff-highlight"]
 
