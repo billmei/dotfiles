@@ -16,6 +16,11 @@ function calc() {
 	printf "\n";
 }
 
+# Interactive rebase with the given number of latest commits
+function rebase() {
+	git rebase -i HEAD~"$1";
+}
+
 # Create a new directory and enter it
 function mkd() {
 	mkdir -p "$@" && cd "$_";
