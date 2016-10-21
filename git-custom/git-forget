@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-git stash save && git stash drop
+git add -A && git checkout -f
