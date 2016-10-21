@@ -20,6 +20,7 @@ brew install youtube-dl
 brew install gpg
 brew install terminal-notifier
 brew install shellcheck
+brew install wifi-password
 
 # Python
 brew install python3
