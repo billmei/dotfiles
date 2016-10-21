@@ -2,6 +2,11 @@
 	# Drop all local changes on the floor
 	forget = !"git add -A && git checkout -f"
 
+	# Git's pickaxe for searching the history of one line of code:
+	# http://www.philandstuff.com/2014/02/09/git-pickaxe.html
+	# use like: git pick thing_you_are_searching_for /path/to/file
+	pick = log -p -S
+
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
