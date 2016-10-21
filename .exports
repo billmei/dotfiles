@@ -1,3 +1,7 @@
+# Turn off Homebrew Analytics
+# https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
+export HOMEBREW_NO_ANALYTICS=1
+
 # Make vim the default editor.
 export EDITOR='vim';
 
@@ -25,5 +29,9 @@ export MANPAGER='less -X';
 # Always enable colored `grep` output.
 export GREP_OPTIONS='--color=auto';
 
+# Load NVM (Node Version Manager)
 export NVM_DIR="/Users/kortaggio/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# Load Postgres.app
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"

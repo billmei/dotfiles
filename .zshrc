@@ -52,8 +52,6 @@ ZSH_THEME="ys"
 plugins=(rails git ruby sublime python)
 
 # User configuration
-export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,5 +87,3 @@ for file in ~/.{path,exports,aliases,functions,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
-
-export HOMEBREW_NO_ANALYTICS=1
