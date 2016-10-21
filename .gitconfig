@@ -116,6 +116,14 @@
 	old = red # deletions
 	new = green # additions
 
+
+[color "diff-highlight"]
+
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+
 [color "status"]
 
 	added = yellow
@@ -171,12 +179,16 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
 [user]
 	name = Bill Mei
 	email = kortaggio@users.noreply.github.com
+
 [github]
 	user = kortaggio
+
 [branch]
 	autosetupmerge = true
+
 [credential]
 	helper = osxkeychain

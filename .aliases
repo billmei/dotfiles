@@ -1,7 +1,7 @@
 # Git Shortcuts
 alias gs="git status"
-alias gd="git diff"
-alias gds="git diff --staged"
+alias gd="git diff --color | diff-so-fancy | less --tabs=4 -RFX"
+alias gds="git diff --staged --color | diff-so-fancy | less --tabs=4 -RFX"
 alias gb="git branch"
 alias gc="git checkout"
 alias branch="git checkout -b"
