@@ -61,6 +61,7 @@ brew tap phinze/cask
 brew install brew-cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew cask install google-chrome
+brew cask install xtrafinder
 brew cask install smoothmouse
 brew cask install vlc
 brew cask install iterm2
