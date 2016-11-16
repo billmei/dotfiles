@@ -64,6 +64,7 @@ brew cask install radiant-player
 brew cask install unetbootin
 brew tap trinitronx/homebrew-truecrypt
 brew cask install truecrypt
+brew cask install transmission
 # brew cask install virtualbox
 
 # Fonts
