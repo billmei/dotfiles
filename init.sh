@@ -9,8 +9,23 @@
 # Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 git config --file="$(brew --repository)/.git/config" --replace-all homebrew.analyticsdisabled true
+
+# Make sure we’re using the latest Homebrew.
+brew update
+
+# Upgrade any already-installed formulae.
+brew upgrade
+
+# Install GNU core utilities (those that come with macOS are outdated).
+# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+brew install coreutils
+
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+brew install findutils
+
+# Science Rules
 brew tap homebrew/science
-brew install wget
+brew install wget --with-iri
 brew install go
 brew install ant
 brew install ffmpeg
