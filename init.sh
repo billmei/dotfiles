@@ -23,6 +23,10 @@ brew install coreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 
+# ZSH!
+brew install zsh zsh-completions
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 # Science Rules
 brew tap homebrew/science
 brew install wget --with-iri
@@ -42,7 +46,7 @@ brew tap phinze/cask
 brew install brew-cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew cask install google-chrome
-brew cask install xtrafinder
+brew cask install totalfinder
 brew cask install smoothmouse
 brew cask install vlc
 brew cask install iterm2
@@ -104,3 +108,33 @@ pip3 install jupyter
 pip3 install flask
 pip3 install django
 pip3 install pylint && pip install pylint
+
+# Symlink stuff
+
+dotfiles_repo=`pwd`
+
+ln -s "${dotfiles_repo}/.aliases"      "${HOME}/.aliases"
+ln -s "${dotfiles_repo}/.bash_profile" "${HOME}/.bash_profile"
+ln -s "${dotfiles_repo}/.bash_prompt"  "${HOME}/.bash_prompt"
+ln -s "${dotfiles_repo}/.bashrc"       "${HOME}/.bashrc"
+ln -s "${dotfiles_repo}/.curlrc"       "${HOME}/.curlrc"
+ln -s "${dotfiles_repo}/.exports"      "${HOME}/.exports"
+ln -s "${dotfiles_repo}/.functions"    "${HOME}/.functions"
+ln -s "${dotfiles_repo}/.gitconfig"    "${HOME}/.gitconfig"
+ln -s "${dotfiles_repo}/.gitignore"    "${HOME}/.gitignore"
+ln -s "${dotfiles_repo}/.inputrc"      "${HOME}/.inputrc"
+ln -s "${dotfiles_repo}/.macos"        "${HOME}/.macos"
+ln -s "${dotfiles_repo}/.pryrc"        "${HOME}/.pryrc"
+ln -s "${dotfiles_repo}/.screenrc"     "${HOME}/.screenrc"
+ln -s "${dotfiles_repo}/.vimrc"        "${HOME}/.vimrc"
+ln -s "${dotfiles_repo}/.wgetrc"       "${HOME}/.wgetrc"
+ln -s "${dotfiles_repo}/.zshrc"        "${HOME}/.zshrc"
+
+
+
+
+
+
+
+
+
