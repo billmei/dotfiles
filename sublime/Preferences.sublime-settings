@@ -28,6 +28,7 @@
 	[
 		"tmp",
 		"vendor",
+		"venv",
 		"node_modules",
 		".svn",
 		".git",
