@@ -58,6 +58,10 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 echo "Set the clock to 24h time"
 defaults write -g AppleICUForce24HourTime -bool TRUE
 
+echo "Show remaining battery time and percentage"
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+defaults write com.apple.menuextra.battery ShowTime -string "YES"
+
 ###############################################################################
 echo "SSD-specific tweaks"
 ###############################################################################
@@ -309,7 +313,7 @@ echo "Disable the annoying line marks"
 defaults write com.apple.Terminal ShowLineMarks -int 0
 
 echo "Install the Monokai Soda theme for iTerm"
-open "${pwd}/Monokai Soda.itermcolors"
+open "${pwd}/terminal/Monokai Soda.itermcolors"
 
 ###############################################################################
 # Time Machine                                                                #

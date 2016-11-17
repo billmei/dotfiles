@@ -1,6 +1,3 @@
 {
-	"extensions":
-	[
-		"ejs"
-	]
+	"extensions": ["ejs"]
 }

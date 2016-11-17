@@ -67,6 +67,7 @@ brew install opencv
 brew install gpg
 
 # Other Homebrew stuff
+brew install diff-so-fancy
 brew install heroku
 brew install youtube-dl
 brew install terminal-notifier
@@ -134,4 +135,4 @@ ln -s "${dotfiles_repo}/.zshrc"        "${HOME}/.zshrc"
 
 # Remove existing ys.zsh-theme and replace it with the custom one
 rm "${HOME}/.oh-my-zsh/themes/ys.zsh-theme"
-ln -s "${dotfiles_repo}/.oh-my-zsh/themes/ys.zsh-theme" "${HOME}/.oh-my-zsh/themes/ys.zsh-theme"
+ln -s "${dotfiles_repo}/terminal/ys.zsh-theme" "${HOME}/.oh-my-zsh/themes/ys.zsh-theme"
