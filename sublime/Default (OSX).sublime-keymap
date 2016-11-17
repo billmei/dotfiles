@@ -66,6 +66,9 @@
 	{ "keys": ["alt+backspace"], "command": "delete_word", "args": { "forward": false, "sub_words": true } },
 	{ "keys": ["alt+delete"], "command": "delete_word", "args": { "forward": true, "sub_words": true } },
 
+	{ "keys": ["super+shift+r"], "command": "reveal_in_sidebar"}
+	{ "keys": ["super+i"], "command": "copy_path"}
+
 	{ "keys": ["super+shift+k"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
 
 ]
