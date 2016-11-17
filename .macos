@@ -339,8 +339,8 @@ echo "Address Book, Dashboard, iCal, TextEdit, and Disk Utility"
 echo "Enable the debug menu in Address Book"
 defaults write com.apple.addressbook ABShowDebugMenu -bool true
 
-echo "Enable Dashboard dev mode (allows keeping widgets on the desktop)"
-defaults write com.apple.dashboard devmode -bool true
+echo "Turn off the dashboard"
+defaults write com.apple.dashboard mcx-disabled -boolean yes
 
 echo "Use plain text mode for new TextEdit documents"
 defaults write com.apple.TextEdit RichText -int 0
