@@ -16,8 +16,12 @@ function rebase() {
 	git rebase -i HEAD~"$1";
 }
 
-# Squash the last two commits together
-alias squash="git reset --soft HEAD^ && git commit --amend"
+# Squash the last n commits together (default n=2)
+function squash() {
+	ARG1=${1:-2}
+	((LAST_N_COMMITS = $ARG1 - 1))
+	git reset --soft HEAD~$LAST_N_COMMITS && git commit --amend
+}
 
 function gd() {
 	git diff --color "$@" | diff-so-fancy | less --tabs=4 -RX
