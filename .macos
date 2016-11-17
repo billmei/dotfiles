@@ -82,6 +82,10 @@ echo "Enable full keyboard access for all controls"
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
+echo "Set a blazingly fast keyboard repeat rate"
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
 echo "Set language and text formats"
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
@@ -92,6 +96,7 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 echo "Disable auto-correct"
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
 
 ###############################################################################
 echo "Screen"
@@ -303,8 +308,8 @@ defaults write com.apple.terminal SecureKeyboardEntry -bool true
 echo "Disable the annoying line marks"
 defaults write com.apple.Terminal ShowLineMarks -int 0
 
-echo "Install the Solarized Dark theme for iTerm"
-open "${HOME}/init/Solarized Dark.itermcolors"
+echo "Install the Monokai Soda theme for iTerm"
+open "${pwd}/Monokai Soda.itermcolors"
 
 ###############################################################################
 # Time Machine                                                                #

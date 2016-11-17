@@ -26,35 +26,21 @@ brew install findutils
 # ZSH!
 brew install zsh zsh-completions
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-# Science Rules
-brew tap homebrew/science
-brew install wget --with-iri
-brew install go
-brew install ant
-brew install ffmpeg
-brew install eigen
-brew install opencv
-brew install youtube-dl
-brew install gpg
-brew install terminal-notifier
-brew install shellcheck
-brew install wifi-password
+chsh -s /bin/zsh
 
 # Cask files
-brew tap phinze/cask
-brew install brew-cask
+brew tap caskroom/cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew cask install google-chrome
-brew cask install totalfinder
-brew cask install smoothmouse
-brew cask install vlc
-brew cask install iterm2
-brew cask install flux
-brew cask install spectacle
-brew cask install dropbox
-brew cask install heroku-toolbelt
 brew cask install sublime-text
+brew cask install iterm2
+brew cask install totalfinder
+brew tap trinitronx/homebrew-truecrypt
+brew cask install truecrypt
+brew cask install spectacle
+brew cask install flux
+brew cask install dropbox
+brew cask install vlc
 brew cask install postgres
 brew cask install ccleaner
 brew cask install dash
@@ -62,14 +48,30 @@ brew cask install the-unarchiver
 brew cask install firefox
 brew cask install skype
 brew cask install anki
-brew cask install gpgtools
-brew cask install flash
+brew cask install flash-player
 brew cask install radiant-player
 brew cask install unetbootin
-brew tap trinitronx/homebrew-truecrypt
-brew cask install truecrypt
 brew cask install transmission
+brew cask install gpgtools
 # brew cask install virtualbox
+
+# Science Rules
+brew tap homebrew/science
+brew install wget --with-iri
+brew install go
+brew install ant
+brew install ffmpeg
+brew install libav
+brew install eigen
+brew install opencv
+brew install gpg
+
+# Other Homebrew stuff
+brew install heroku
+brew install youtube-dl
+brew install terminal-notifier
+brew install shellcheck
+brew install wifi-password
 
 # Fonts
 brew tap caskroom/fonts
@@ -89,30 +91,30 @@ npm install -g semver
 npm install -g rimraf
 npm install -g fsevents
 npm install -g git-fire # 🔥
+npm install -g eslint
 
 # Python
 brew install python3
-pip install awscli
+pip3 install --upgrade pip
+pip3 install awscli
+## Web dev stuff
+pip3 install flask
+pip3 install django
+pip3 install pylint
 ## ML stuff
 pip3 install pandas
 pip3 install bs4
 pip3 install sklearn
 pip3 install numpy
 pip3 install scipy
-pip3 install requests && pip install requests
+pip3 install requests
 pip3 install tensorflow
 pip3 install lxml
 pip3 install nltk
 pip3 install jupyter
-## Web dev stuff
-pip3 install flask
-pip3 install django
-pip3 install pylint && pip install pylint
 
 # Symlink stuff
-
 dotfiles_repo=`pwd`
-
 ln -s "${dotfiles_repo}/.aliases"      "${HOME}/.aliases"
 ln -s "${dotfiles_repo}/.bash_profile" "${HOME}/.bash_profile"
 ln -s "${dotfiles_repo}/.bash_prompt"  "${HOME}/.bash_prompt"
@@ -130,11 +132,6 @@ ln -s "${dotfiles_repo}/.vimrc"        "${HOME}/.vimrc"
 ln -s "${dotfiles_repo}/.wgetrc"       "${HOME}/.wgetrc"
 ln -s "${dotfiles_repo}/.zshrc"        "${HOME}/.zshrc"
 
-
-
-
-
-
-
-
-
+# Remove existing ys.zsh-theme and replace it with the custom one
+rm "${HOME}/.oh-my-zsh/themes/ys.zsh-theme"
+ln -s "${dotfiles_repo}/.oh-my-zsh/themes/ys.zsh-theme" "${HOME}/.oh-my-zsh/themes/ys.zsh-theme"
