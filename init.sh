@@ -49,7 +49,6 @@ brew cask install firefox
 brew cask install skype
 brew cask install anki
 brew cask install flash-player
-brew cask install radiant-player
 brew cask install unetbootin
 brew cask install transmission
 brew cask install gpgtools
