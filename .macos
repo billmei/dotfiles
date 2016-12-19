@@ -14,7 +14,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
-echo "General UI/UX"
+# General UI/UX
 ###############################################################################
 
 echo "Enter a computer name"
@@ -67,14 +67,14 @@ defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 defaults write com.apple.menuextra.battery ShowTime -string "YES"
 
 ###############################################################################
-echo "SSD-specific tweaks"
+# SSD-specific tweaks
 ###############################################################################
 
 echo "Disable the sudden motion sensor as it’s not useful for SSDs"
 sudo pmset -a sms 0
 
 ###############################################################################
-echo "Trackpad, mouse, keyboard, Bluetooth accessories, and input"
+# Trackpad, mouse, keyboard, Bluetooth accessories, and input
 ###############################################################################
 
 echo "Trackpad: map bottom right corner to right-click"
@@ -107,7 +107,7 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 
 ###############################################################################
-echo "Screen"
+# Screen
 ###############################################################################
 
 echo "Require password immediately after sleep or screen saver begins"
@@ -124,7 +124,7 @@ echo "Disable shadow in screenshots"
 defaults write com.apple.screencapture disable-shadow -bool true
 
 ###############################################################################
-# Finder                                                                      #
+# Finder
 ###############################################################################
 
 echo "Finder: disable window animations and Get Info animations"
@@ -183,7 +183,7 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 	Privileges -bool true
 
 ###############################################################################
-# Dock, Dashboard, and hot corners                                            #
+# Dock, Dashboard, and hot corners
 ###############################################################################
 
 echo "Set the icon size of Dock items to 36 pixels"
@@ -215,7 +215,7 @@ defaults write com.apple.dock showhidden -bool YES
 #defaults write com.apple.dock persistent-apps -array
 
 ###############################################################################
-# Safari & WebKit                                                             #
+# Safari & WebKit
 ###############################################################################
 
 echo "Privacy: don’t send search queries to Apple"
@@ -287,7 +287,7 @@ echo "Update extensions automatically"
 defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 
 ###############################################################################
-# Mail                                                                        #
+# Mail
 ###############################################################################
 
 echo "Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app"
@@ -297,13 +297,13 @@ echo "Disable automatic spell checking"
 defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
 
 ###############################################################################
-# Spotlight                                                                   #
+# Spotlight
 ###############################################################################
 
 # No custom settings configured.
 
 ###############################################################################
-# Terminal & iTerm 2                                                          #
+# Terminal & iTerm 2
 ###############################################################################
 
 echo "Only use UTF-8 in Terminal.app"
@@ -320,7 +320,7 @@ echo "Install the Monokai Soda theme for iTerm"
 open "${pwd}/terminal/Monokai Soda.itermcolors"
 
 ###############################################################################
-# Time Machine                                                                #
+# Time Machine
 ###############################################################################
 
 echo "Prevent Time Machine from prompting to use new hard drives as backup volume"
@@ -328,7 +328,7 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 
 ###############################################################################
-echo "Activity Monitor"
+# Activity Monitor
 ###############################################################################
 
 echo "Sort Activity Monitor results by CPU usage"
@@ -337,7 +337,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 
 ###############################################################################
-echo "Address Book, Dashboard, iCal, TextEdit, and Disk Utility"
+# Address Book, Dashboard, iCal, TextEdit, and Disk Utility
 ###############################################################################
 
 echo "Enable the debug menu in Address Book"
@@ -360,7 +360,7 @@ echo "Auto-play videos when opened with QuickTime Player"
 defaults write com.apple.QuickTimePlayerX MGPlayMovieOnOpen -bool true
 
 ###############################################################################
-# Mac App Store                                                               #
+# Mac App Store
 ###############################################################################
 
 echo "Enable the WebKit Developer Tools in the Mac App Store"
@@ -377,7 +377,7 @@ defaults write com.apple.commerce AutoUpdate -bool true
 
 
 ###############################################################################
-# Photos                                                                      #
+# Photos
 ###############################################################################
 
 echo "Prevent Photos from opening automatically when devices are plugged in"
@@ -385,7 +385,7 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 
 ###############################################################################
-# Messages                                                                    #
+# Messages
 ###############################################################################
 
 echo "Disable automatic emoji substitution (i.e. use plain text smileys)"
@@ -399,7 +399,7 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 
 
 ###############################################################################
-# Google Chrome & Google Chrome Canary                                        #
+# Google Chrome & Google Chrome Canary
 ###############################################################################
 
 
@@ -417,7 +417,7 @@ defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls
 
 
 ###############################################################################
-# Transmission.app                                                            #
+# Transmission.app
 ###############################################################################
 
 echo "Use `~/Documents/Torrents` to store incomplete downloads"
