@@ -67,9 +67,11 @@ defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 defaults write com.apple.menuextra.battery ShowTime -string "YES"
 
 ###############################################################################
-# Security
+# Security and Privacy
 ###############################################################################
 
+# From:
+# https://github.com/drduh/macOS-Security-and-Privacy-Guide
 echo "Enable firewall"
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 
@@ -79,6 +81,13 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
 echo "Prevent signed software from automatically circumventing firewall"
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned off
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsignedapp off
+
+echo "Disable automatic redirect to captive portals when connecting to insecure wifi"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.control Active -bool false
+
+echo "Disable logging of quarantine events as it's a privacy leak of all downloaded files"
+:>~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2
+sudo chflags schg ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2
 
 ###############################################################################
 # SSD-specific tweaks
