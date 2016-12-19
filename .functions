@@ -1,3 +1,14 @@
+# GPG Encrypt a directory as an archive
+function encrypt() {
+	tar zcvf - $1 | gpg --sign --symmetric > $1$(date +%F-%H%M).tar.gz.gpg
+}
+
+# Decrypt archives created by the method above
+function decrypt() {
+	tmpfile=decrypted-$(date +%F-%H%M).tar.gz
+	gpg -o $tmpfile -d $1 && tar zxvf $tmpfile && rm $tmpfile
+}
+
 # Simple calculator
 function calc() {
 	local result="";
