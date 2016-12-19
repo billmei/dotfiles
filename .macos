@@ -67,6 +67,20 @@ defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 defaults write com.apple.menuextra.battery ShowTime -string "YES"
 
 ###############################################################################
+# Security
+###############################################################################
+
+echo "Enable firewall"
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+
+echo "Enable firewall stealth mode"
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
+
+echo "Prevent signed software from automatically circumventing firewall"
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned off
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsignedapp off
+
+###############################################################################
 # SSD-specific tweaks
 ###############################################################################
 
