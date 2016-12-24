@@ -49,6 +49,7 @@ brew cask install flash-player
 brew cask install unetbootin
 brew cask install transmission
 brew cask install gpgtools
+brew cask install torbrowser
 # brew cask install virtualbox
 
 # Science Rules
