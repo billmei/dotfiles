@@ -16,6 +16,9 @@
 	# The reverse of git add
 	unstage = reset
 
+	# The reverse of git blame: Given an author, tell me what files they modified.
+	forgive = "!f() { git log --no-merges --author=$1 --name-only --pretty=format:'' | sort -u; }; f"
+
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
