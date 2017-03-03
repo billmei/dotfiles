@@ -3,7 +3,6 @@ alias dotfiles="cd /Users/kortaggio/Dropbox/github/dotfiles/"
 
 # Git Shortcuts
 alias gs="git status"
-alias gb="git branch"
 alias gc="git checkout"
 alias branch="git checkout -b"
 alias commit="git add -A; git commit -m"
