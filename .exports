@@ -5,7 +5,6 @@ export HOMEBREW_NO_ANALYTICS=1
 # Increase security for Homebrew
 # https://github.com/drduh/macOS-Security-and-Privacy-Guide#homebrew
 export HOMEBREW_NO_INSECURE_REDIRECT=1
-export HOMEBREW_CASK_OPTS=--require-sha
 
 # Make vim the default editor.
 export EDITOR='vim';
