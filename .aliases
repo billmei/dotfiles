@@ -22,6 +22,9 @@ function squash() {
 	git reset --soft HEAD~$LAST_N_COMMITS && git commit --amend
 }
 
+# Pretty diffs
+# NOTE: If you are using the git plugin in zsh you will have to comment out
+#       the existing gd alias in ".oh-my-zsh/plugins/git/git.plugin.zsh"
 function gd() {
 	git diff --color "$@" | diff-so-fancy | less --tabs=4 -RX
 }
