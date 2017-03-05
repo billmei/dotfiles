@@ -1,5 +1,6 @@
 # Jump quickly to directories
 alias dotfiles="cd /Users/kortaggio/Dropbox/github/dotfiles/"
+alias kortaggio="cd /Users/kortaggio/Dropbox/github/kortaggio"
 
 # Git Shortcuts
 alias gs="git status"
