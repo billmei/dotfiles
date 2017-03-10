@@ -9,6 +9,7 @@
 # Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 git config --file="$(brew --repository)/.git/config" --replace-all homebrew.analyticsdisabled true
+touch ~/.SideBarEnhancements.optout
 
 # Make sure we’re using the latest Homebrew.
 brew update
