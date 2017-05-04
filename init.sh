@@ -72,7 +72,7 @@ brew install coreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 
-# Other Homebrew stuff
+# Other useful Homebrew stuff
 brew install diff-so-fancy
 brew install tree
 brew install heroku
@@ -80,6 +80,7 @@ brew install youtube-dl
 brew install terminal-notifier
 brew install shellcheck
 brew install wifi-password
+brew install rename
 
 # Fonts
 brew tap caskroom/fonts
