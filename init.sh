@@ -4,7 +4,6 @@
 
 # Applications that have to be installed manually
 # Little Snitch https://www.obdev.at/products/littlesnitch/index.html
-# Giphy Capture https://itunes.apple.com/us/app/giphy-capture.-the-gif-maker/id668208984?mt=12
 
 # Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -48,6 +47,7 @@ brew cask install skype
 brew cask install anki
 brew cask install calibre
 brew cask install flash-player
+brew cask install kap
 brew cask install unetbootin
 brew cask install transmission
 brew cask install gpgtools
