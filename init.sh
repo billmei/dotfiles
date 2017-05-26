@@ -31,7 +31,6 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew cask install google-chrome
 brew cask install sublime-text
 brew cask install iterm2
-brew cask install totalfinder
 brew tap trinitronx/homebrew-truecrypt
 brew cask install truecrypt
 brew cask install spectacle
