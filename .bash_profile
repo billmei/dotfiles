@@ -55,3 +55,5 @@ alias memcached-stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.memc
 alias memcached-restart="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist;launchctl load ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist"
 
 export NODE_PATH="/usr/local/lib/node_modules"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
