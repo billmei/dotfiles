@@ -52,6 +52,7 @@ brew cask install transmission
 brew cask install gpgtools
 brew cask install torbrowser
 brew cask install viscosity
+brew cask install sequel-pro
 # brew cask install virtualbox
 
 # Science Rules
