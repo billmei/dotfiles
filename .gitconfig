@@ -189,10 +189,10 @@
 
 [user]
 	name = Bill Mei
-	email = kortaggio@users.noreply.github.com
+	email = bill@billmei.net
 
 [github]
-	user = kortaggio
+	user = billmei
 
 [branch]
 	autosetupmerge = true
