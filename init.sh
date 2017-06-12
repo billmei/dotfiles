@@ -172,8 +172,12 @@ ln -s "${dotfiles_repo}/sublime/Ruby.sublime-settings"               "${HOME}/Li
 ln -s "${dotfiles_repo}/sublime/Sass.sublime-settings"               "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Sass.sublime-settings"
 ln -s "${dotfiles_repo}/sublime/SublimeLinter.sublime-settings"      "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings"
 ln -s "${dotfiles_repo}/sublime/SublimeLinter/Monokai (SL).tmTheme"  "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter/Monokai (SL).tmTheme"
-ln -s "${dotfiles_repo}/sublime/YAML.sublime-settings"               "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/YAML.sublime-settings"           
+ln -s "${dotfiles_repo}/sublime/YAML.sublime-settings"               "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/YAML.sublime-settings"
 
- # These settings can't be symlinked
+# Symlink macOS system settings
+ln -s "${dotfiles_repo}/macos/plist/com.kortaggio.airportoff.plist" "${HOME}/Library/LaunchAgents/com.kortaggio.airportoff.plist"
+ln -s "${dotfiles_repo}/macos/plist/com.kortaggio.airporton.plist" "${HOME}/Library/LaunchAgents/com.kortaggio.airporton.plist"
+
+# These settings can't be symlinked
 cp "${dotfiles_repo}/sublime/Preferences.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
 cp "${dotfiles_repo}/sublime/Default (OSX).sublime-keymap" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
