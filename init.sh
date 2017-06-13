@@ -176,7 +176,6 @@ ln -s "${dotfiles_repo}/sublime/YAML.sublime-settings"               "${HOME}/Li
 
 # Symlink macOS system settings
 ln -s "${dotfiles_repo}/macos/plist/com.kortaggio.airportoff.plist" "${HOME}/Library/LaunchAgents/com.kortaggio.airportoff.plist"
-ln -s "${dotfiles_repo}/macos/plist/com.kortaggio.airporton.plist" "${HOME}/Library/LaunchAgents/com.kortaggio.airporton.plist"
 
 # These settings can't be symlinked
 cp "${dotfiles_repo}/sublime/Preferences.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
