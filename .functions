@@ -258,3 +258,20 @@ function o() {
 function tre() {
   tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+# Turn wifi on and off, or block and unblock wifi based on plist file settings.
+function wifi() {
+  if [[ "$1" == "on" ]]; then
+    networksetup -setairportpower en0 on;
+  elif [[ "$1" == "off" ]]; then
+    networksetup -setairportpower en0 off;
+  elif [[ "$1" == "block" ]]; then
+    launchctl load ~/Library/LaunchAgents/com.kortaggio.airportoff.plist;
+  elif [[ "$1" == "unblock" ]]; then
+    launchctl unload ~/Library/LaunchAgents/com.kortaggio.airportoff.plist;
+  else
+    echo "No action given."
+    echo "Actions: [on, off, block, unblock]"
+    echo "Example: wifi off"
+  fi;
+}
