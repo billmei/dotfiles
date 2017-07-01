@@ -107,6 +107,7 @@ npm install -g eslint
 brew install python3
 pip3 install --upgrade pip
 pip3 install awscli
+pip3 install coursera-dl
 ## Web dev stuff
 pip3 install flask
 pip3 install django
