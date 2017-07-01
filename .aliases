@@ -34,6 +34,9 @@ function gds() {
 	git diff --staged --color "$@" | diff-so-fancy | less --tabs=4 -RX
 }
 
+# Dadjokes
+alias dadjoke="curl -s -w '\n' -H 'Accept: text/plain' https://icanhazdadjoke.com/"
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
