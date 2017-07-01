@@ -222,6 +222,25 @@ function getcertnames() {
   fi;
 }
 
+# Downloads an entire (static) website locally for archival purposes
+# or so that it can be used offline
+function mirror-site() {
+  # --mirror           Makes the download recursive (among other things)
+  # --convert-links    Convert all the links (also to stuff like CSS stylesheets) to relative, so it will be suitable for offline viewing
+  # --adjust-extension Adds suitable extensions to filenames (html or css) depending on their content-type
+  # --page-requisites  Download things like CSS style-sheets and images required to properly display the page offline
+  # --no-parent        Restrict download to only the given directory and do not traverse outside this subtree
+  # --wait=1           Wait 1 second between each request so as to not get rate-limited
+  wget \
+    --mirror \
+    --convert-links \
+    --adjust-extension \
+    --page-requisites \
+    --no-parent \
+    --wait=1 \
+    "$@"
+}
+
 # `o` with no arguments opens the current directory, otherwise opens the given
 # location
 function o() {
