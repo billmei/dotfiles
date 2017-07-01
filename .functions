@@ -270,8 +270,8 @@ function wifi() {
   elif [[ "$1" == "unblock" ]]; then
     launchctl unload ~/Library/LaunchAgents/com.kortaggio.airportoff.plist;
   else
-    echo "No action given."
-    echo "Actions: [on, off, block, unblock]"
+    echo "No argument given."
+    echo "Arguments: [on, off, block, unblock]"
     echo "Example: wifi off"
   fi;
 }
