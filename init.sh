@@ -83,6 +83,10 @@ brew install shellcheck
 brew install wifi-password
 brew install rename
 
+# Just for fun
+brew install fortune
+brew install cowsay
+
 # Fonts
 brew tap caskroom/fonts
 brew cask install font-noto-sans
