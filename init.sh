@@ -82,6 +82,7 @@ brew install terminal-notifier
 brew install shellcheck
 brew install wifi-password
 brew install rename
+brew install magic-wormhole
 
 # Fonts
 brew tap caskroom/fonts

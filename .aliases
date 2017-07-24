@@ -111,6 +111,10 @@ alias ftpoff="launchctl unload -w /System/Library/LaunchDaemons/ftp.plist"
 alias pgon="launchctl load -w /usr/local/opt/postgresql/homebrew.mxcl.postgresql.plist"
 alias pgoff="launchctl unload -w /usr/local/opt/postgresql/homebrew.mxcl.postgresql.plist"
 
+# Turn IPV6 on Wifi on and off
+alias ipv6on="networksetup -setv6automatic Wi-Fi"
+alias ipv6off="networksetup -setv6off Wi-Fi"
+
 # Empty the Trash on all mounted volumes and the main HDD
 # Also, clear Apple’s System Logs to improve shell startup speed
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
