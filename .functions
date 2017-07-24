@@ -261,7 +261,9 @@ function tre() {
 
 # Turn wifi on and off, or block and unblock wifi based on plist file settings.
 function wifi() {
-  if [[ "$1" == "on" ]]; then
+  if [[ "$1" == "status" ]]; then
+    networksetup -getairportpower en0;
+  elif [[ "$1" == "on" ]]; then
     networksetup -setairportpower en0 on;
   elif [[ "$1" == "off" ]]; then
     networksetup -setairportpower en0 off;
@@ -271,7 +273,7 @@ function wifi() {
     launchctl unload ~/Library/LaunchAgents/com.kortaggio.airportoff.plist;
   else
     echo "No argument given."
-    echo "Arguments: [on, off, block, unblock]"
+    echo "Arguments: [status, on, off, block, unblock]"
     echo "Example: wifi off"
   fi;
 }
