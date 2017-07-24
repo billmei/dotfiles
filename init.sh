@@ -84,6 +84,10 @@ brew install wifi-password
 brew install rename
 brew install magic-wormhole
 
+# Just for fun
+brew install fortune
+brew install cowsay
+
 # Fonts
 brew tap caskroom/fonts
 brew cask install font-noto-sans
