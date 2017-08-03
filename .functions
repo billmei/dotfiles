@@ -32,6 +32,13 @@ function mkd() {
   mkdir -p "$@" && cd "$_";
 }
 
+# Flattens a directory (removes one layer of folders)
+# -r to recursively flatten all subdirectories too (removes all folders)
+function flatten() {
+  find "$@" -maxdepth 1 -exec mv '{}' . \;
+  rmdir "$@"
+}
+
 # Change working directory to the top-most Finder window location
 function cdf() { # short for `cdfinder`
   cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
