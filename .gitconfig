@@ -14,6 +14,7 @@
 	s = status -s
 	
 	# The reverse of git add
+	minus = reset
 	unstage = reset
 
 	# The reverse of git blame: Given an author, tell me what files they modified.
