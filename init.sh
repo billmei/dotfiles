@@ -102,6 +102,12 @@ brew cask install font-computer-modern
 brew cask install font-comic-neue
 brew cask install font-montserrat
 
+# Ruby
+# Install RVM
+# gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+# \curl -sSL https://get.rvm.io | bash -s stable --ruby
+# gem install rubocop
+
 # NPM
 brew install node
 npm install -g gitjk
@@ -151,6 +157,11 @@ ln -s "${dotfiles_repo}/.screenrc"     "${HOME}/.screenrc"
 ln -s "${dotfiles_repo}/.vimrc"        "${HOME}/.vimrc"
 ln -s "${dotfiles_repo}/.wgetrc"       "${HOME}/.wgetrc"
 ln -s "${dotfiles_repo}/.zshrc"        "${HOME}/.zshrc"
+
+# Symlink Linting config
+ln -s "${dotfiles_repo}/config/ruby/rubocop/default.yml" default.yml
+ln -s "${dotfiles_repo}/config/ruby/rubocop/enabled.yml" enabled.yml
+ln -s "${dotfiles_repo}/config/ruby/rubocop/disabled.yml" disabled.yml
 
 # Remove existing ys.zsh-theme and replace it with the custom one
 rm "${HOME}/.oh-my-zsh/themes/ys.zsh-theme"
