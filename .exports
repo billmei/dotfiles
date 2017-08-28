@@ -39,3 +39,5 @@ export NVM_DIR="/Users/kortaggio/.nvm"
 
 # Load Postgres.app
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
+# Load sqlite3
+export PATH="/usr/local/opt/sqlite/bin:$PATH"

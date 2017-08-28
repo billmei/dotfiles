@@ -55,6 +55,10 @@ brew cask install viscosity
 brew cask install sequel-pro
 # brew cask install virtualbox
 
+# Security stuff
+brew cask install youll-never-take-me-alive
+brew cask install linkliar
+
 # Science Rules
 brew tap homebrew/science
 brew install wget --with-iri

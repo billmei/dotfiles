@@ -102,6 +102,16 @@ sudo defaults write /Library/Preferences/com.apple.mDNSResponder.plist NoMultica
 echo "Disable the sudden motion sensor as it’s not useful for SSDs"
 sudo pmset -a sms 0
 
+# Needed for youll-never-take-me-alive
+echo "Destroy the FileVault key on standby to prevent it being retrieved from cold memory"
+# http://osxdaily.com/2013/07/06/maximize-filevault-security-destroy-key-storage-standby/
+sudo pmset -a DestroyFVKeyOnStandby 1
+
+echo "Immediately hibernate when going into sleep mode"
+# Needed for youll-never-take-me-alive
+sudo pmset -a hibernatemode 25
+sudo pmset -a standbydelay 0
+
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input
 ###############################################################################
