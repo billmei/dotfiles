@@ -56,7 +56,7 @@ brew cask install sequel-pro
 # brew cask install virtualbox
 
 # Security stuff
-brew cask install youll-never-take-me-alive
+# brew cask install youll-never-take-me-alive # Requires forced hibernation which is too inconvenient
 brew cask install linkliar
 brew cask install little-snitch
 brew cask install micro-snitch
