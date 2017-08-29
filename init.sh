@@ -31,8 +31,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew cask install google-chrome
 brew cask install sublime-text
 brew cask install iterm2
-brew tap trinitronx/homebrew-truecrypt
-brew cask install truecrypt
+brew cask install veracrypt
 brew cask install spectacle
 brew cask install flux
 brew cask install dropbox
@@ -58,7 +57,7 @@ brew cask install sequel-pro
 # Security stuff
 # brew cask install youll-never-take-me-alive # Requires forced hibernation which is too inconvenient
 brew cask install linkliar
-brew cask install little-snitch
+# brew cask install little-snitch # Unfortunately, logs browsing history
 brew cask install micro-snitch
 
 # Science Rules
