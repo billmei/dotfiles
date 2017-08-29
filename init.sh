@@ -58,6 +58,8 @@ brew cask install sequel-pro
 # Security stuff
 brew cask install youll-never-take-me-alive
 brew cask install linkliar
+brew cask install little-snitch
+brew cask install micro-snitch
 
 # Science Rules
 brew tap homebrew/science

@@ -107,10 +107,14 @@ echo "Destroy the FileVault key on standby to prevent it being retrieved from co
 # http://osxdaily.com/2013/07/06/maximize-filevault-security-destroy-key-storage-standby/
 sudo pmset -a DestroyFVKeyOnStandby 1
 
-echo "Immediately hibernate when going into sleep mode"
-# Needed for youll-never-take-me-alive
-sudo pmset -a hibernatemode 25
-sudo pmset -a standbydelay 0
+# echo "Immediately hibernate when going into sleep mode"
+# # Needed for youll-never-take-me-alive
+# pmset -g | grep hibernatemode
+# sudo pmset -a hibernatemode 25
+# # sudo pmset -a hibernatemode 3 # to restore
+# pmset -g | grep standbydelay
+# sudo pmset -a standbydelay 0
+# # sudo pmset -a standbydelay 10800 # to restore
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input
