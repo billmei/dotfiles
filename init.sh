@@ -88,6 +88,7 @@ brew install shellcheck
 brew install wifi-password
 brew install rename
 brew install magic-wormhole
+brew install asciinema # https://asciinema.org/
 
 # Just for fun
 brew install fortune
