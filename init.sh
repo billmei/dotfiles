@@ -106,9 +106,10 @@ brew cask install font-montserrat
 
 # Ruby
 # Install RVM
-# gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-# \curl -sSL https://get.rvm.io | bash -s stable --ruby
-# gem install rubocop
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+gem install rubocop
+gem install awesome_print
 
 # NPM
 brew install node
@@ -153,6 +154,7 @@ ln -s "${dotfiles_repo}/.functions"    "${HOME}/.functions"
 ln -s "${dotfiles_repo}/.gitconfig"    "${HOME}/.gitconfig"
 ln -s "${dotfiles_repo}/.gitignore"    "${HOME}/.gitignore"
 ln -s "${dotfiles_repo}/.inputrc"      "${HOME}/.inputrc"
+ln -s "${dotfiles_repo}/.irbrc"        "${HOME}/.irbrc"
 ln -s "${dotfiles_repo}/.macos"        "${HOME}/.macos"
 ln -s "${dotfiles_repo}/.pryrc"        "${HOME}/.pryrc"
 ln -s "${dotfiles_repo}/.screenrc"     "${HOME}/.screenrc"
