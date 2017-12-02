@@ -188,8 +188,9 @@ rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Ruby.sublim
 rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Sass.sublime-settings"
 rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Shell-Unix-Generic.sublime-settings"
 rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings"
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter/Monokai (SL).tmTheme"
 rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/YAML.sublime-settings"
+
+rm -r "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter"
 
 ln -s "${dotfiles_repo}/sublime/CoffeeScript.sublime-settings"       "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/CoffeeScript.sublime-settings"
 ln -s "${dotfiles_repo}/sublime/EJS.sublime-settings"                "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/EJS.sublime-settings"
@@ -206,8 +207,10 @@ ln -s "${dotfiles_repo}/sublime/Ruby.sublime-settings"               "${HOME}/Li
 ln -s "${dotfiles_repo}/sublime/Sass.sublime-settings"               "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Sass.sublime-settings"
 ln -s "${dotfiles_repo}/sublime/Shell-Unix-Generic.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Shell-Unix-Generic.sublime-settings"
 ln -s "${dotfiles_repo}/sublime/SublimeLinter.sublime-settings"      "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings"
-ln -s "${dotfiles_repo}/sublime/SublimeLinter/Monokai (SL).tmTheme"  "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter/Monokai (SL).tmTheme"
 ln -s "${dotfiles_repo}/sublime/YAML.sublime-settings"               "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/YAML.sublime-settings"
+
+mkdir "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter"
+ln -s ${dotfiles_repo}/sublime/SublimeLinter/* "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter/"
 
 # These settings have to be done sequentially so they don't get overwritten
 rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings" && \
