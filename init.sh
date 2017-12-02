@@ -174,7 +174,6 @@ ln -s "${dotfiles_repo}/terminal/ys.zsh-theme" "${HOME}/.oh-my-zsh/themes/ys.zsh
 
 # Symlink Sublime Text settings
 rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/CoffeeScript.sublime-settings"
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
 rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/EJS.sublime-settings"
 rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/HTML.sublime-settings"
 rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/JavaScript (Babel).sublime-settings"
@@ -200,9 +199,12 @@ ln -s "${dotfiles_repo}/sublime/SublimeLinter.sublime-settings"      "${HOME}/Li
 ln -s "${dotfiles_repo}/sublime/SublimeLinter/Monokai (SL).tmTheme"  "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter/Monokai (SL).tmTheme"
 ln -s "${dotfiles_repo}/sublime/YAML.sublime-settings"               "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/YAML.sublime-settings"
 
+# These settings have to be done sequentially so they don't get overwritten
+rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings" && \
+  ln -s "${dotfiles_repo}/sublime/Preferences.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+
+rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap" && \
+  ln -s "${dotfiles_repo}/sublime/Default (OSX).sublime-keymap" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
+
 # Symlink macOS system settings
 ln -s "${dotfiles_repo}/macos/plist/com.kortaggio.airportoff.plist" "${HOME}/Library/LaunchAgents/com.kortaggio.airportoff.plist"
-
-# These settings can't be symlinked
-cp "${dotfiles_repo}/sublime/Preferences.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
-cp "${dotfiles_repo}/sublime/Default (OSX).sublime-keymap" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
