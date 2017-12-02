@@ -191,6 +191,7 @@ rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/SublimeLint
 rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/YAML.sublime-settings"
 
 rm -r "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter"
+rm -r "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/snippets"
 
 ln -s "${dotfiles_repo}/sublime/CoffeeScript.sublime-settings"       "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/CoffeeScript.sublime-settings"
 ln -s "${dotfiles_repo}/sublime/EJS.sublime-settings"                "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/EJS.sublime-settings"
@@ -211,6 +212,8 @@ ln -s "${dotfiles_repo}/sublime/YAML.sublime-settings"               "${HOME}/Li
 
 mkdir "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter"
 ln -s ${dotfiles_repo}/sublime/SublimeLinter/* "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter/"
+mkdir "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/snippets"
+ln -s ${dotfiles_repo}/sublime/snippets/* "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/snippets/"
 
 # These settings have to be done sequentially so they don't get overwritten
 rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings" && \
