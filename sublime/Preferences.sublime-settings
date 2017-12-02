@@ -1,5 +1,5 @@
 {
-	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Monokai Extended Bright (SL).tmTheme",
 	"file_exclude_patterns":
 	[
 		"*.sassc",
@@ -27,9 +27,12 @@
 	"folder_exclude_patterns":
 	[
 		"tmp",
-		"vendor",
 		"venv",
+		"bin",
+		".webassets-cache",
+		"__pycache__",
 		"node_modules",
+		"vendor",
 		".svn",
 		".git",
 		".hg",
@@ -39,5 +42,6 @@
 	"ignored_packages":
 	[
 		"Vintage"
-	]
+	],
+	"scroll_past_end": true
 }
