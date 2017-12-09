@@ -11,6 +11,9 @@ alias gl="git log --decorate --graph --stat"
 alias pull='git pull origin $(git symbolic-ref --short -q HEAD)'
 alias push='git push -u origin $(git symbolic-ref --short -q HEAD)'
 
+# Docker
+alias dco="docker-compose"
+
 # Application shortcuts
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 
