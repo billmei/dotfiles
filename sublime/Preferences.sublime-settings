@@ -43,5 +43,6 @@
 	[
 		"Vintage"
 	],
-	"scroll_past_end": true
+	"scroll_past_end": true,
+	"theme": "Default.sublime-theme"
 }
