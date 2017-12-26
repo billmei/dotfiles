@@ -125,7 +125,6 @@ npm install -g eslint
 # Python
 brew install python3
 pip3 install --upgrade pip
-pip3 install awscli
 pip3 install coursera-dl
 ## Web dev stuff
 pip3 install flask
@@ -142,6 +141,11 @@ pip3 install tensorflow
 pip3 install lxml
 pip3 install nltk
 pip3 install jupyter
+
+# SDKs
+brew cask install google-cloud-sdk
+brew cask install android-platform-tools
+pip3 install awscli
 
 # Symlink stuff
 dotfiles_repo=`pwd`
