@@ -126,3 +126,9 @@ Style/StringHashKeys:
 Style/StringMethods:
   Description: 'Checks if configured preferred methods are used over non-preferred.'
   Enabled: false
+
+Style/TrailingCommaInArguments:
+  Enabled: false
+
+Style/TrailingCommaInLiteral:
+  Enabled: false
