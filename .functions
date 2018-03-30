@@ -248,6 +248,30 @@ function mirror-site() {
     "$@"
 }
 
+# Downloads a single (static) website locally for archival purposes
+# or so they it can be used as an offline bookmark.
+# Stores the output in the Junkyard folder.
+function bookmark() {
+  TITLE=$(curl "$@" -so - | ruby -rnokogiri -e 'puts Nokogiri::HTML(readlines.join).xpath("//title").map { |e| e.content }')
+  # --convert-links    Convert all the links (also to stuff like CSS stylesheets) to relative, so it will be suitable for offline viewing
+  # --adjust-extension Adds suitable extensions to filenames (html or css) depending on their content-type
+  # --page-requisites  Download things like CSS style-sheets and images required to properly display the page offline
+  wget \
+    --convert-links \
+    --adjust-extension \
+    --page-requisites \
+    --directory-prefix="/Users/kortaggio/Dropbox/Junkyard/bookmarks/$TITLE" \
+    "$@"
+}
+
+# Downloads a video using youtube-dl locally for archival purposes
+# Stores the output in the Junkyard folder.
+function yt-bookmark() {
+  youtube-dl \
+    -o "/Users/kortaggio/Dropbox/Junkyard/videos/%(title)s - %(id)s.%(ext)s" \
+    "$@"
+}
+
 # `o` with no arguments opens the current directory, otherwise opens the given
 # location
 function o() {
