@@ -58,6 +58,9 @@ plugins=(rails git ruby sublime python)
 
 source $ZSH/oh-my-zsh.sh
 
+# Allow using the HEAD^ macro: https://github.com/robbyrussell/oh-my-zsh/issues/449
+setopt NO_NOMATCH
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
