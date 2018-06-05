@@ -36,8 +36,3 @@ export GREP_OPTIONS='--color=auto';
 # Load NVM (Node Version Manager)
 export NVM_DIR="/Users/kortaggio/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-# Load Postgres.app
-export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
-# Load sqlite3
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
