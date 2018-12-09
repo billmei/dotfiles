@@ -3,6 +3,7 @@
 
 # Private things
 .extra
+Dash_Snippets.dash
 
 # Folder view configuration files
 .DS_Store
