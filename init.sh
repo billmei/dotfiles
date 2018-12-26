@@ -2,9 +2,6 @@
 # Initialization for development on MacOS
 # Python 3, Ruby, and ES6.
 
-# Applications that have to be installed manually
-# Little Snitch https://www.obdev.at/products/littlesnitch/index.html
-
 # Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 git config --file="$(brew --repository)/.git/config" --replace-all homebrew.analyticsdisabled true
@@ -57,8 +54,6 @@ brew cask install sequel-pro
 # Security stuff
 # brew cask install youll-never-take-me-alive # Requires forced hibernation which is too inconvenient
 brew cask install linkliar
-# brew cask install little-snitch # Unfortunately, logs browsing history
-brew cask install micro-snitch
 
 # Science Rules
 brew tap homebrew/science
