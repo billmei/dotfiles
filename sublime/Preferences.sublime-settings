@@ -1,4 +1,8 @@
 {
+	"added_words":
+	[
+		"blog"
+	],
 	"color_scheme": "Packages/User/SublimeLinter/Monokai Extended Bright (SL).tmTheme",
 	"file_exclude_patterns":
 	[
@@ -22,7 +26,8 @@
 		"*.class",
 		"*.psd",
 		"*.db",
-		"*.sublime-workspace"
+		"*.sublime-workspace",
+		".jekyll-metadata"
 	],
 	"folder_exclude_patterns":
 	[
@@ -36,7 +41,9 @@
 		".svn",
 		".git",
 		".hg",
-		"CVS"
+		"CVS",
+		"_site",
+		".sass-cache"
 	],
 	"font_size": 14,
 	"ignored_packages":
