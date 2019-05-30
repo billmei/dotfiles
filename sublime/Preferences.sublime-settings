@@ -1,7 +1,8 @@
 {
 	"added_words":
 	[
-		"blog"
+		"blog",
+		"online"
 	],
 	"color_scheme": "Packages/User/SublimeLinter/Monokai Extended Bright (SL).tmTheme",
 	"file_exclude_patterns":
