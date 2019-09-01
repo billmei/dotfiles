@@ -260,7 +260,7 @@ function bookmark() {
     --convert-links \
     --adjust-extension \
     --page-requisites \
-    --directory-prefix="/Users/kortaggio/Dropbox/Junkyard/bookmarks/$TITLE" \
+    --directory-prefix="/Users/kortaggio/Dropbox/Junkyard/bookmarks" \
     "$@"
 }
 

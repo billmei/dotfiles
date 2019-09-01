@@ -6,5 +6,8 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 # Some Homebrew binaries need this
 export PATH="/usr/local/sbin:$PATH"
 
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/kortaggio/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
