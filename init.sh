@@ -108,34 +108,35 @@ gem install rubocop
 gem install awesome_print
 
 # NPM
-brew install node
-npm install -g gitjk
-npm install -g npmlog
-npm install -g semver
-npm install -g rimraf
-npm install -g fsevents
-npm install -g git-fire # 🔥
-npm install -g eslint
+# TODO: Use nvm instead
+# brew install node
+# npm install -g gitjk
+# npm install -g npmlog
+# npm install -g semver
+# npm install -g rimraf
+# npm install -g fsevents
+# npm install -g git-fire # 🔥
+# npm install -g eslint
 
 # Python
-brew install python3
-pip3 install --upgrade pip
-pip3 install coursera-dl
-## Web dev stuff
-pip3 install flask
-pip3 install django
-pip3 install pylint
-## ML stuff
-pip3 install pandas
-pip3 install bs4
-pip3 install sklearn
-pip3 install numpy
-pip3 install scipy
-pip3 install requests
-pip3 install tensorflow
-pip3 install lxml
-pip3 install nltk
-pip3 install jupyter
+brew install pyenv
+# pip3 install --upgrade pip
+# pip3 install coursera-dl
+# ## Web dev stuff
+# pip3 install flask
+# pip3 install django
+# pip3 install pylint
+# ## ML stuff
+# pip3 install pandas
+# pip3 install bs4
+# pip3 install sklearn
+# pip3 install numpy
+# pip3 install scipy
+# pip3 install requests
+# pip3 install tensorflow
+# pip3 install lxml
+# pip3 install nltk
+# pip3 install jupyter
 
 # SDKs
 brew cask install google-cloud-sdk
