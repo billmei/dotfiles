@@ -10,7 +10,7 @@ export PATH="/usr/local/sbin:$PATH"
 HEROKU_AC_ZSH_SETUP_PATH=/Users/kortaggio/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
 # pyenv
-export PATH="$PATH:$HOME/.pyenv/bin"
+export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
