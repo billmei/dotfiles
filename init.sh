@@ -76,6 +76,7 @@ brew install findutils
 # Other useful Homebrew stuff
 brew install diff-so-fancy
 brew install tree
+brew install git-extras
 brew install heroku
 brew install youtube-dl
 brew install terminal-notifier
