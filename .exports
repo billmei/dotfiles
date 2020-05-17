@@ -1,6 +1,9 @@
 # Turn off Homebrew Analytics
 # https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
+# Don't auto-update Homebrew on `brew install`
+# https://github.com/Homebrew/brew/blob/master/Library/Homebrew/manpages/brew.1.md.erb
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 # Increase security for Homebrew
 # https://github.com/drduh/macOS-Security-and-Privacy-Guide#homebrew

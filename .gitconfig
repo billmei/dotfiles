@@ -9,6 +9,8 @@
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	loghuman = log --graph --pretty='format:%C(auto)%h%C(magenta)% G?%C(cyan)%<(16)% ad%C(green)%<(12,trunc)% aN%C(reset)% s%C(auto)%+d' --date=human
+
 
 	# View the current working tree status using the short format
 	s = status -s
@@ -48,6 +50,18 @@
 
 	# Remove the old tag with this name and tag the latest commit with it.
 	retag = "!r() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; r"
+
+	# Clyde's cool forkpoint finder
+	dfork = diff-fork
+	dh = diff HEAD
+	diff-fork = !git diff $(git forkpt)
+	fork-point = merge-base --fork-point master
+	forkpt = fork-point
+	delete-stale = !"for branch in $(git for-each-ref --format '%(refname:short) %(upstream:track)' refs/heads | awk '$2 == \"[gone]\" {print $1}'); do git branch -D ${branch}; done #"
+
+	# Bring local fully up to date with remote
+	sync = !"if [ $# -eq 0 ]; then set -- master; fi; for branch in \"${@}\"; do git fetch origin \"${branch}:${branch}\"; done #"
+	up = pull --all --autostash --prune --rebase
 
 	# Find branches containing commit
 	fb = "!f() { git branch -a --contains $1; }; f"
