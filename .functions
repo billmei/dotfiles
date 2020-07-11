@@ -247,7 +247,7 @@ function mirror-site() {
 
 # Downloads a single (static) website locally for archival purposes
 # or so they it can be used as an offline bookmark.
-# Stores the output in the Junkyard folder.
+# Stores the output in the `bookmarks` project.
 function bookmark() {
   TITLE=$(curl "$@" -so - | ruby -rnokogiri -e 'puts Nokogiri::HTML(readlines.join).xpath("//title").map { |e| e.content }')
   # --convert-links    Convert all the links (also to stuff like CSS stylesheets) to relative, so it will be suitable for offline viewing
@@ -257,7 +257,7 @@ function bookmark() {
     --convert-links \
     --adjust-extension \
     --page-requisites \
-    --directory-prefix="/Users/kortaggio/Dropbox/Junkyard/bookmarks" \
+    --directory-prefix="/Users/kortaggio/Dropbox/github/bookmarks/public" \
     "$@"
 }
 
