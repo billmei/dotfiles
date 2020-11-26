@@ -23,11 +23,12 @@
 		"*.suo",
 		"*.pdb",
 		"*.idb",
-		".DS_Store",
 		"*.class",
 		"*.psd",
 		"*.db",
 		"*.sublime-workspace",
+		"*.ai",
+		".DS_Store",
 		".jekyll-metadata"
 	],
 	"folder_exclude_patterns":

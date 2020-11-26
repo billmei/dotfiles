@@ -11,9 +11,9 @@
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 	loghuman = log --graph --pretty='format:%C(auto)%h%C(magenta)% G?%C(cyan)%<(16)% ad%C(green)%<(12,trunc)% aN%C(reset)% s%C(auto)%+d' --date=human
 
-	# Fast forward production to match develop
+	# Fast forward production and beta to match develop
 	# !Dangerous! Use with care.
-	ff = !"git checkout prod && git merge develop && git checkout develop"
+	ff = !"git checkout prod && git merge develop && git checkout beta && git merge develop && git checkout develop"
 
 	# View the current working tree status using the short format
 	s = status -s
