@@ -109,7 +109,6 @@ gem install rubocop
 gem install awesome_print
 
 # NPM
-# brew install nvm
 # Install latest LTS
 # brew install node
 # npm install -g gitjk
