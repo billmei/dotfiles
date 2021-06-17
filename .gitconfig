@@ -15,6 +15,10 @@
 	# !Dangerous! Use with care.
 	ff = !"git checkout prod && git merge develop && git checkout beta && git merge develop && git checkout develop"
 
+	# Deploy develop to both prod and beta
+	# !!Really Dangerous!! Really use with care.
+	ffdeploy = !"git checkout prod && git merge develop && git push origin prod && git checkout beta && git merge develop && git push origin beta && git checkout develop"
+
 	# View the current working tree status using the short format
 	s = status -s
 	

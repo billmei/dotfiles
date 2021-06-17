@@ -4,7 +4,7 @@ CDPATH=".:/Users/kortaggio/Dropbox/github"
 # Git Shortcuts
 alias gs="git status"
 alias gc="git checkout"
-alias gb="git branch"
+alias gb="git branch --sort=-committerdate"
 alias branch="git checkout -b"
 alias commit="git add -A; git commit -m"
 alias gl="git log --decorate --graph --stat"
@@ -67,6 +67,12 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # Get week number
 alias week='date +%V'
+
+# Date and time
+# 2021-05-29T22:48:38Z
+alias utc="date -u +\"%Y-%m-%dT%H:%M:%SZ\""
+# 1622328533
+alias unix="gdate -u +\"%s\""
 
 # Stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
