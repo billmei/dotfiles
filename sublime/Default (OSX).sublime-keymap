@@ -117,6 +117,8 @@
 			{ "operand": false, "operator": "equal", "match_all": true, "key": "auto_complete_visible" },
 			{ "match_all": true, "key": "is_abbreviation" }
 		]
-	}
+	},
 
+	// Match VSCode
+	{ "keys": ["super+k", "super+k"], "command": "toggle_side_bar" }
 ]
