@@ -1,3 +1,4 @@
+# MODIFIED
 # Clean, simple, compatible and meaningful.
 # Tested on Linux, Unix and Windows under ANSI colors.
 # It is recommended to use with a dark background.

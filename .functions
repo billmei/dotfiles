@@ -1,3 +1,8 @@
+# Turn a video file into a gif with a width of 1000px
+function togif() {
+  ffmpeg -i $1 -pix_fmt rgb8 -r 10 $1.gif && gifsicle -O3 $1.gif -o $1.gif && gifsicle --resize-fit-width 1000 -i $1.gif -o $1.gif
+}
+
 # GPG Encrypt a directory as an archive
 function encrypt() {
   tar zcvf - $1 | gpg --sign --symmetric > $1$(date +%F-%H%M).tar.gz.gpg
