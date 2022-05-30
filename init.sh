@@ -176,6 +176,11 @@ ln -s "${dotfiles_repo}/config/ruby/rubocop/disabled.yml" disabled.yml
 rm "${HOME}/.oh-my-zsh/themes/ys.zsh-theme"
 ln -s "${dotfiles_repo}/terminal/ys.zsh-theme" "${HOME}/.oh-my-zsh/themes/ys.zsh-theme"
 
+# Workaround from Chromium bug
+# https://github.com/electron/electron/issues/2617#issuecomment-571447707
+mkdir "${HOME}/Library/Keybindings"
+ln -s "${dotfiles_repo}/macos/DefaultKeyBinding.dict" "${HOME}/Library/KeyBindings/DefaultKeyBinding.dict"
+
 # Symlink Sublime Text settings
 rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/CoffeeScript.sublime-settings"
 rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/EJS.sublime-settings"
