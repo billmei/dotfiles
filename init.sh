@@ -15,7 +15,7 @@ brew upgrade
 
 # ZSH!
 brew install zsh zsh-completions
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 chsh -s /bin/zsh
 
 # Security
@@ -25,35 +25,19 @@ brew install openssl
 # Cask files
 brew tap caskroom/cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-brew cask install google-chrome
-brew cask install sublime-text
-brew cask install iterm2
-brew cask install veracrypt
-brew cask install spectacle
-brew cask install flux
-brew cask install dropbox
-brew cask install vlc
-brew cask install postgres
-brew cask install ccleaner
-brew cask install dash
-brew cask install the-unarchiver
-brew cask install firefox
-brew cask install skype
-brew cask install anki
-brew cask install calibre
-brew cask install flash-player
-brew cask install kap
-brew cask install unetbootin
-brew cask install transmission
-brew cask install gpgtools
-brew cask install torbrowser
-brew cask install viscosity
-brew cask install sequel-pro
-# brew cask install virtualbox
+brew install --cask google-chrome
+brew install --cask iterm2
+brew install --cask rectangle
+brew install --cask dropbox
+brew install --cask vlc
+brew install --cask the-unarchiver
+brew install --cask firefox
+brew install --cask anki
+brew install --cask calibre
 
 # Security stuff
-# brew cask install youll-never-take-me-alive # Requires forced hibernation which is too inconvenient
-brew cask install linkliar
+# brew install --cask youll-never-take-me-alive # Requires forced hibernation which is too inconvenient
+brew install --cask linkliar
 
 # Science Rules
 brew tap homebrew/science
@@ -181,55 +165,5 @@ ln -s "${dotfiles_repo}/terminal/ys.zsh-theme" "${HOME}/.oh-my-zsh/themes/ys.zsh
 mkdir "${HOME}/Library/Keybindings"
 ln -s "${dotfiles_repo}/macos/DefaultKeyBinding.dict" "${HOME}/Library/KeyBindings/DefaultKeyBinding.dict"
 
-# Symlink Sublime Text settings
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/CoffeeScript.sublime-settings"
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/EJS.sublime-settings"
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Hack.tmLanguage"
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Jack.sublime-settings"
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/HTML.sublime-settings"
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/JavaScript (Babel).sublime-settings"
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/JavaScript.sublime-settings"
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Markdown.sublime-settings"
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Plain text.sublime-settings"
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Python.sublime-settings"
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Ruby Haml.sublime-settings"
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Ruby.sublime-settings"
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Sass.sublime-settings"
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Shell-Unix-Generic.sublime-settings"
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings"
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/YAML.sublime-settings"
-
-rm -r "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter"
-rm -r "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/snippets"
-
-ln -s "${dotfiles_repo}/sublime/CoffeeScript.sublime-settings"       "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/CoffeeScript.sublime-settings"
-ln -s "${dotfiles_repo}/sublime/EJS.sublime-settings"                "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/EJS.sublime-settings"
-ln -s "${dotfiles_repo}/sublime/Hack.tmLanguage"                     "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Hack.tmLanguage"
-ln -s "${dotfiles_repo}/sublime/Jack.sublime-settings"               "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Jack.sublime-settings"
-ln -s "${dotfiles_repo}/sublime/HTML.sublime-settings"               "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/HTML.sublime-settings"
-ln -s "${dotfiles_repo}/sublime/JavaScript (Babel).sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/JavaScript (Babel).sublime-settings"
-ln -s "${dotfiles_repo}/sublime/JavaScript.sublime-settings"         "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/JavaScript.sublime-settings"
-ln -s "${dotfiles_repo}/sublime/Markdown.sublime-settings"           "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Markdown.sublime-settings"
-ln -s "${dotfiles_repo}/sublime/Plain text.sublime-settings"         "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Plain text.sublime-settings"
-ln -s "${dotfiles_repo}/sublime/Python.sublime-settings"             "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Python.sublime-settings"
-ln -s "${dotfiles_repo}/sublime/Ruby Haml.sublime-settings"          "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Ruby Haml.sublime-settings"
-ln -s "${dotfiles_repo}/sublime/Ruby.sublime-settings"               "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Ruby.sublime-settings"
-ln -s "${dotfiles_repo}/sublime/Sass.sublime-settings"               "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Sass.sublime-settings"
-ln -s "${dotfiles_repo}/sublime/Shell-Unix-Generic.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Shell-Unix-Generic.sublime-settings"
-ln -s "${dotfiles_repo}/sublime/SublimeLinter.sublime-settings"      "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings"
-ln -s "${dotfiles_repo}/sublime/YAML.sublime-settings"               "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/YAML.sublime-settings"
-
-mkdir "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter"
-ln -s ${dotfiles_repo}/sublime/SublimeLinter/* "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter/"
-mkdir "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/snippets"
-ln -s ${dotfiles_repo}/sublime/snippets/* "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/snippets/"
-
-# These settings have to be done sequentially so they don't get overwritten
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings" && \
-  ln -s "${dotfiles_repo}/sublime/Preferences.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
-
-rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap" && \
-  ln -s "${dotfiles_repo}/sublime/Default (OSX).sublime-keymap" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
-
 # Symlink macOS system settings
-ln -s "${dotfiles_repo}/macos/plist/com.kortaggio.airportoff.plist" "${HOME}/Library/LaunchAgents/com.kortaggio.airportoff.plist"
+ln -s "${dotfiles_repo}/macos/plist/com.${USER}.airportoff.plist" "${HOME}/Library/LaunchAgents/com.${USER}.airportoff.plist"

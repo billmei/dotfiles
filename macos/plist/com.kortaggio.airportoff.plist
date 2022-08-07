@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>com.kortaggio.airportoff</string>
+	<string>com.billmei.airportoff</string>
 	<key>ProgramArguments</key>
 	<array>
 		<string>/usr/sbin/networksetup</string>

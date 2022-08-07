@@ -106,6 +106,9 @@
     "screenEdgeGapRight" : {
       "float" : 0
     },
+    "screenEdgeGapsOnMainScreenOnly" : {
+      "bool" : false
+    },
     "screenEdgeGapTop" : {
       "float" : 0
     },
@@ -113,6 +116,9 @@
       "float" : 145
     },
     "showAllActionsInMenu" : {
+      "int" : 0
+    },
+    "sixthsSnapArea" : {
       "int" : 0
     },
     "sizeOffset" : {
@@ -138,6 +144,9 @@
     },
     "specifiedWidth" : {
       "float" : 1680
+    },
+    "stageSize" : {
+      "float" : 190
     },
     "subsequentExecutionMode" : {
       "int" : 0
@@ -189,5 +198,5 @@
       "modifierFlags" : 262144
     }
   },
-  "version" : "59"
+  "version" : "63"
 }

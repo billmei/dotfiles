@@ -262,7 +262,7 @@ function bookmark() {
     --convert-links \
     --adjust-extension \
     --page-requisites \
-    --directory-prefix="/Users/kortaggio/Dropbox/Junkyard/bookmarks" \
+    --directory-prefix="/Users/${USER}/Dropbox/Junkyard/bookmarks" \
     "$@"
 }
 
@@ -270,7 +270,7 @@ function bookmark() {
 # Stores the output in the Junkyard folder.
 function yt-bookmark() {
   youtube-dl \
-    -o "/Users/kortaggio/Dropbox/Junkyard/videos/%(title)s - %(id)s.%(ext)s" \
+    -o "/Users/${USER}/Dropbox/Junkyard/videos/%(title)s - %(id)s.%(ext)s" \
     "$@"
 }
 
@@ -301,9 +301,9 @@ function wifi() {
   elif [[ "$1" == "off" ]]; then
     networksetup -setairportpower en0 off;
   elif [[ "$1" == "block" ]]; then
-    launchctl load ~/Library/LaunchAgents/com.kortaggio.airportoff.plist;
+    launchctl load ~/Library/LaunchAgents/com.$USER.airportoff.plist;
   elif [[ "$1" == "unblock" ]]; then
-    launchctl unload ~/Library/LaunchAgents/com.kortaggio.airportoff.plist;
+    launchctl unload ~/Library/LaunchAgents/com.$USER.airportoff.plist;
   else
     echo "No argument given."
     echo "Arguments: [status, on, off, block, unblock]"

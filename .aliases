@@ -1,5 +1,5 @@
 # Jump quickly to directories
-CDPATH=".:/Users/kortaggio/Dropbox/github"
+CDPATH=".:/Users/${USER}/Dropbox/github"
 
 # Git Shortcuts
 alias gs="git status"
@@ -76,7 +76,7 @@ alias unix="gdate -u +\"%s\""
 
 # Stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
-alias stopwatch='/Users/kortaggio/Dropbox/github/dotfiles/scripts/stopwatch.sh'
+alias stopwatch="/Users/${USER}/Dropbox/github/dotfiles/scripts/stopwatch.sh"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias updateall='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update'

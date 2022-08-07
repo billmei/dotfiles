@@ -33,6 +33,9 @@ echo "Always show scrollbars"
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
 
+echo "Adjust toolbar title rollover delay"
+defaults write NSGlobalDomain NSToolbarTitleViewRolloverDelay -float 0
+
 echo "Speed up the green maximize window resize animation"
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
@@ -93,14 +96,14 @@ echo "Disable the crash reporter"
 defaults write com.apple.CrashReporter DialogType none
 
 echo "Disable multicast advertising"
-sudo defaults write /Library/Preferences/com.apple.mDNSResponder.plist NoMulticastAdvertisements -bool YES
+sudo defaults write /Library/Preferences/com.apple.mDNSResponder.plist NoMulticastAdvertisements -bool true
 
 ###############################################################################
 # SSD-specific tweaks
 ###############################################################################
 
-echo "Disable the sudden motion sensor as it’s not useful for SSDs"
-sudo pmset -a sms 0
+# echo "Disable the sudden motion sensor as it’s not useful for SSDs"
+# sudo pmset -a sms 0
 
 # Needed for youll-never-take-me-alive
 echo "Destroy the FileVault key on standby to prevent it being retrieved from cold memory"
@@ -157,8 +160,8 @@ echo "Require password immediately after sleep or screen saver begins"
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-echo "Save all screenshots to ~/Pictures instead of the Desktop"
-defaults write com.apple.screencapture location -string "${HOME}/Pictures"
+echo "Save all screenshots to ~/Downloads instead of the Desktop"
+defaults write com.apple.screencapture location -string "${HOME}/Downloads"
 
 echo "Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)"
 defaults write com.apple.screencapture type -string "png"
@@ -169,6 +172,10 @@ defaults write com.apple.screencapture disable-shadow -bool true
 ###############################################################################
 # Finder
 ###############################################################################
+
+
+echo "Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons"
+defaults write com.apple.finder QuitMenuItem -bool true
 
 echo "Finder: disable window animations and Get Info animations"
 defaults write com.apple.finder DisableAllAnimations -bool true
@@ -200,16 +207,22 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 echo "Disable the warning when changing a file extension"
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
+echo "Enable spring loading for directories"
+defaults write NSGlobalDomain com.apple.springing.enabled -bool true
+
+echo "Remove the spring loading delay for directories"
+defaults write NSGlobalDomain com.apple.springing.delay -float 0
+
 echo "Avoid creating .DS_Store files on network or USB volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 echo "Use list view in all Finder windows by default"
-# Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
+# Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 echo "Show the ~/Library folder"
-chflags nohidden ~/Library
+chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
 
 echo "Show the /Volumes folder"
 sudo chflags nohidden /Volumes
@@ -249,8 +262,14 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 echo "Make mission control animation super fast"
 defaults write com.apple.dock expose-animation-duration -float 0.1
 
+echo "Automatically hide and show the Dock"
+defaults write com.apple.dock autohide -bool true
+
 echo "Make hidden apps translucent in the Dock"
-defaults write com.apple.dock showhidden -bool YES
+defaults write com.apple.dock showhidden -bool true
+
+echo "Don’t show recent applications in Dock"
+defaults write com.apple.dock show-recents -bool false
 
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
@@ -319,6 +338,7 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 echo "Disable Java"
 defaults write com.apple.Safari WebKitJavaEnabled -bool false
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled -bool false
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabledForLocalFiles -bool false
 
 echo "Block pop-up windows"
 defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically -bool false
@@ -449,9 +469,9 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 ###############################################################################
 
 
-echo "Allow installing user scripts via GitHub Gist or Userscripts.org"
-defaults write com.google.Chrome ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
-defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
+# echo "Allow installing user scripts via GitHub Gist or Userscripts.org"
+# defaults write com.google.Chrome ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
+# defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
 
 echo "Disable the all too sensitive backswipe on trackpads"
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
@@ -466,9 +486,9 @@ defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls
 # Transmission.app
 ###############################################################################
 
-echo "Use `~/Documents/Torrents` to store incomplete downloads"
+echo "Use `~/Documents` to store incomplete downloads"
 defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Documents/Torrents"
+defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Documents"
 
 echo "Don’t prompt for confirmation before downloading"
 defaults write org.m0k.transmission DownloadAsk -bool false
