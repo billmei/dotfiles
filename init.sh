@@ -60,8 +60,7 @@ brew install findutils
 # Other useful Homebrew stuff
 brew install diff-so-fancy
 brew install tree
-brew install git-extras
-brew install heroku
+# brew install git-extras
 brew install youtube-dl
 brew install terminal-notifier
 brew install shellcheck
@@ -149,6 +148,7 @@ ln -s "${dotfiles_repo}/.pryrc"        "${HOME}/.pryrc"
 ln -s "${dotfiles_repo}/.screenrc"     "${HOME}/.screenrc"
 ln -s "${dotfiles_repo}/.vimrc"        "${HOME}/.vimrc"
 ln -s "${dotfiles_repo}/.wgetrc"       "${HOME}/.wgetrc"
+rm "${HOME}/.zshrc"
 ln -s "${dotfiles_repo}/.zshrc"        "${HOME}/.zshrc"
 
 # Symlink Linting config

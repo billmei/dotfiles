@@ -35,11 +35,6 @@ echo -e "${GREEN}==========================${NC}"
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
 sudo add-apt-repository ppa:nathan-renniewaldock/flux
 
-echo -e "${CYAN}Installing Heroku Toolbelt${NC}"
-echo -e "${CYAN}(Enter root password when prompted)${NC}"
-echo -e "${GREEN}==========================${NC}"
-wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-
 echo -e "${CYAN}Continuing automated installation.${NC}"
 echo -e "${CYAN}Go grab a cup of tea and come back in two hours :)${NC}"
 echo -e "${GREEN}==========================${NC}"
@@ -47,7 +42,6 @@ echo -e "${GREEN}==========================${NC}"
 sudo apt-get -y install git meld
 git config --global user.name $gh_name
 git config --global user.email $gh_email
-heroku status
 sudo apt-get update
 sudo apt-get -y install sublime-text-installer
 sudo apt-get -y install fluxgui
@@ -103,26 +97,6 @@ sudo apt-get -y install zeal
 echo -e "${CYAN}Installing Calibre${NC}"
 echo -e "${GREEN}==========================${NC}"
 sudo -v && wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | sudo python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main()"
-
-echo -e "${CYAN}Installing Android Debug Bridge${NC}"
-echo -e "${GREEN}==========================${NC}"
-sudo add-apt-repository -y ppa:phablet-team/tools
-sudo apt-get update
-sudo apt-get install -y android-tools-adb android-tools-fastboot
-
-echo -e "${CYAN}Installing node and npm${NC}"
-echo -e "${GREEN}==========================${NC}"
-curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
-sudo apt-get install -y nodejs
-sudo npm install -g bower
-sudo npm install -g grunt
-sudo npm install -g gulp
-
-echo -e "${CYAN}Installing Truecrypt v7.1a from GRC${NC}"
-echo -e "${GREEN}==========================${NC}"
-wget https://www.grc.com/misc/truecrypt/truecrypt-7.1a-linux-x64.tar.gz
-tar xfvz truecrypt-7.1a-linux-x64.tar.gz
-sudo sh truecrypt-7.1a-setup-x64
 
 echo -e "${CYAN}Installing PureVPN's OpenVPN package${NC}"
 echo -e "${GREEN}==========================${NC}"
