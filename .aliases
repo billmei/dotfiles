@@ -118,7 +118,7 @@ alias c="tr -d '\n' | pbcopy"
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
 # Clear history
-alias clearhistory="rm ~/.irb-history && touch ~/.irb-history && rm ~/.lesshst && touch ~/.lesshst && rm ~/.node_repl_history && touch ~/.node_repl_history && rm ~/.pry_history && touch ~/.pry_history && rm ~/.psql_history && touch ~/.psql_history && rm ~/.python_history && touch ~/.python_history && rm ~/.sqlite_history && touch ~/.sqlite_history && rm ~/.viminfo && touch ~/.viminfo && rm ~/.zsh_history && touch ~/.zsh_history"
+alias clearhistory="rm ~/.irb-history && touch ~/.irb-history && rm ~/.lesshst && touch ~/.lesshst && rm ~/.node_repl_history && touch ~/.node_repl_history && rm ~/.pry_history && touch ~/.pry_history && rm ~/.python_history && touch ~/.python_history && rm ~/.sqlite_history && touch ~/.sqlite_history && rm ~/.viminfo && touch ~/.viminfo && rm ~/.zsh_history && touch ~/.zsh_history"
 
 # Turn MySQL on and off
 alias mysqlon="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
@@ -171,9 +171,6 @@ alias map="xargs -n1"
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 	alias "$method"="lwp-request -m '$method'"
 done
-
-# Make Grunt print stack traces by default
-command -v grunt > /dev/null && alias grunt="grunt --stack"
 
 # Kill all the tabs in Chrome to free up memory
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description

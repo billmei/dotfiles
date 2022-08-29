@@ -1,2 +1,11 @@
 # Some Homebrew binaries need this
 export PATH="/usr/local/sbin:$PATH"
+
+# Use Homebrew version of ruby
+if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
+
+# Use Homebrew version of python
+export PATH="/opt/homebrew/opt/python/libexec/bin:$PATH"
