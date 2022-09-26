@@ -9,3 +9,6 @@ fi
 
 # Use Homebrew version of python
 export PATH="/opt/homebrew/opt/python/libexec/bin:$PATH"
+
+# Use rbenv
+eval "$(rbenv init - zsh)"
