@@ -160,6 +160,8 @@ ln -s "${dotfiles_repo}/config/ruby/rubocop/disabled.yml" disabled.yml
 rm "${HOME}/.oh-my-zsh/themes/ys.zsh-theme"
 ln -s "${dotfiles_repo}/terminal/ys.zsh-theme" "${HOME}/.oh-my-zsh/themes/ys.zsh-theme"
 
+# Symlink VSCode config
+ln -s "${dotfiles_repo}/vscode/keybindings.json" "${HOME}/Library/Application Support/Code/User/keybindings.json"
 # Workaround from Chromium bug
 # https://github.com/electron/electron/issues/2617#issuecomment-571447707
 mkdir "${HOME}/Library/Keybindings"
