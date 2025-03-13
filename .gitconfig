@@ -1,6 +1,6 @@
 [alias]
 	# Drop all local changes on the floor
-	forget = !"git add -A && git checkout -f"
+	forget = !"git reset --hard HEAD"
 
 	# Git's pickaxe for searching the history of one line of code:
 	# http://www.philandstuff.com/2014/02/09/git-pickaxe.html
@@ -227,3 +227,5 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[init]
+	defaultBranch = main
