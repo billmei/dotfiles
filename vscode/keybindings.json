@@ -50,4 +50,8 @@
         "command": "editor.action.insertCursorAtEndOfEachLineSelected",
         "when": "editorTextFocus"
     },
+    {
+        "key": "cmd+i",
+        "command": "composerMode.agent"
+    },
 ]

@@ -15,6 +15,9 @@ alias push='git push -u origin $(git symbolic-ref --short -q HEAD)'
 # Python
 alias activate="source .env/bin/activate"
 
+# Text to speech
+alias tts='(cd /Users/billmei/Dropbox/github/ai-scripts && source venv/bin/activate && python one-off-scripts/text-to-speech.py)'
+
 # Docker
 alias dco="docker-compose"
 

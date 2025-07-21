@@ -113,3 +113,6 @@ for file in ~/.{path,exports,aliases,completions,functions,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
+
+# Added by Windsurf
+export PATH="/Users/billmei/.codeium/windsurf/bin:$PATH"
