@@ -3,9 +3,9 @@
 # Python 3, Ruby, and ES6.
 
 # Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-git config --file="$(brew --repository)/.git/config" --replace-all homebrew.analyticsdisabled true
-touch ~/.SideBarEnhancements.optout
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+export HOMEBREW_NO_ANALYTICS=1
+brew analytics off
 
 # Make sure we’re using the latest Homebrew.
 brew update
