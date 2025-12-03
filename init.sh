@@ -25,7 +25,7 @@ brew install openssl
 # Cask files
 brew tap caskroom/cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-brew install --cask google-chrome
+brew install --cask brave-browser
 brew install --cask iterm2
 brew install --cask rectangle
 brew install --cask dropbox
