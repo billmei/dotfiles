@@ -15,7 +15,7 @@ brew upgrade
 
 # ZSH!
 brew install zsh zsh-completions
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 chsh -s /bin/zsh
 
 # Security
@@ -28,27 +28,11 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew install --cask brave-browser
 brew install --cask iterm2
 brew install --cask rectangle
-brew install --cask dropbox
 brew install --cask vlc
 brew install --cask the-unarchiver
 brew install --cask firefox
-brew install --cask anki
-brew install --cask calibre
 
-# Security stuff
-# brew install --cask youll-never-take-me-alive # Requires forced hibernation which is too inconvenient
-brew install --cask linkliar
-
-# Science Rules
-brew tap homebrew/science
-brew install wget --with-iri
-brew install go
-brew install ant
 brew install ffmpeg
-brew install libav
-brew install eigen
-brew install opencv
-brew install gpg
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -61,7 +45,7 @@ brew install findutils
 brew install diff-so-fancy
 brew install tree
 # brew install git-extras
-brew install youtube-dl
+brew install yt-dlp
 brew install terminal-notifier
 brew install shellcheck
 brew install wifi-password
