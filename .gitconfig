@@ -126,6 +126,8 @@
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
 
+	pager = delta
+
 [color]
 
 	# Use colors in Git commands that are capable of colored output when
@@ -147,13 +149,6 @@
 	new = green # additions
 	whitespace = red reverse
 
-[color "diff-highlight"]
-
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
-
 [color "status"]
 
 	added = yellow
@@ -169,6 +164,13 @@
 	# Use `hexdump` to diff binary files
 	textconv = hexdump -v -C
 
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+	dark = true
+
 [help]
 
 	# Automatically correct and execute mistyped commands
@@ -178,6 +180,7 @@
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+	conflictStyle = zdiff3
 
 [push]
 

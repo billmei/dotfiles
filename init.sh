@@ -42,7 +42,7 @@ brew install coreutils
 brew install findutils
 
 # Other useful Homebrew stuff
-brew install diff-so-fancy
+brew install git-delta
 brew install tree
 # brew install git-extras
 brew install yt-dlp
