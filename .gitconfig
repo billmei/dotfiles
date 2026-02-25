@@ -165,11 +165,12 @@
 	textconv = hexdump -v -C
 
 [interactive]
-    diffFilter = delta --color-only
+    diffFilter = delta
 
 [delta]
     navigate = true
 	dark = true
+	line-numbers = true
 
 [help]
 
