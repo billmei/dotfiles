@@ -81,6 +81,16 @@ ln -s "${dotfiles_repo}/config/ruby/rubocop/disabled.yml" disabled.yml
 rm "${HOME}/.oh-my-zsh/themes/ys.zsh-theme"
 ln -s "${dotfiles_repo}/terminal/ys.zsh-theme" "${HOME}/.oh-my-zsh/themes/ys.zsh-theme"
 
+# Symlink Claude Code config
+mkdir -p "${HOME}/.claude"
+ln -s "${dotfiles_repo}/.claude/settings.json" "${HOME}/.claude/settings.json"
+ln -s "${dotfiles_repo}/.claude/agents"        "${HOME}/.claude/agents"
+ln -s "${dotfiles_repo}/.claude/commands"      "${HOME}/.claude/commands"
+ln -s "${dotfiles_repo}/.claude/hooks"         "${HOME}/.claude/hooks"
+ln -s "${dotfiles_repo}/.claude/scripts"       "${HOME}/.claude/scripts"
+ln -s "${dotfiles_repo}/.claude/skills"        "${HOME}/.claude/skills"
+ln -s "${dotfiles_repo}/.claude/templates"     "${HOME}/.claude/templates"
+
 # Symlink VSCode config
 ln -s "${dotfiles_repo}/vscode/keybindings.json" "${HOME}/Library/Application Support/Code/User/keybindings.json"
 # Workaround from Chromium bug
