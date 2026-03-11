@@ -1,3 +1,3 @@
-[submodule "claude/skills/humanizer"]
-	path = claude/skills/humanizer
+[submodule ".claude/skills/humanizer"]
+	path = .claude/skills/humanizer
 	url = https://github.com/blader/humanizer.git
