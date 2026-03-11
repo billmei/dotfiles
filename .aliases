@@ -12,17 +12,8 @@ alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset
 alias pull='git pull origin $(git symbolic-ref --short -q HEAD)'
 alias push='git push -u origin $(git symbolic-ref --short -q HEAD)'
 
-# Python
-alias activate="source .env/bin/activate"
-
 # Text to speech
 alias tts='(cd /Users/billmei/Dropbox/github/ai-scripts && source venv/bin/activate && python one-off-scripts/text-to-speech.py)'
-
-# Docker
-alias dco="docker-compose"
-
-# Application shortcuts
-alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 
 # Interactive rebase with the given number of latest commits
 function rebase() {
@@ -76,9 +67,6 @@ alias unix="gdate -u +\"%s\""
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 alias stopwatch="/Users/${USER}/Dropbox/github/dotfiles/scripts/stopwatch.sh"
 
-# Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias updateall='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update'
-
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
@@ -118,17 +106,9 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 # Clear history
 alias clearhistory="rm ~/.irb-history && touch ~/.irb-history && rm ~/.lesshst && touch ~/.lesshst && rm ~/.node_repl_history && touch ~/.node_repl_history && rm ~/.pry_history && touch ~/.pry_history && rm ~/.python_history && touch ~/.python_history && rm ~/.viminfo && touch ~/.viminfo && rm ~/.zsh_history && touch ~/.zsh_history"
 
-# Turn MySQL on and off
-alias mysqlon="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
-alias mysqloff="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
-
 # Accept FTP connections on your local machine
 alias ftpon="launchctl load -w /System/Library/LaunchDaemons/ftp.plist"
 alias ftpoff="launchctl unload -w /System/Library/LaunchDaemons/ftp.plist"
-
-# Turn PostgreSQL on and off
-alias pgon="launchctl load -w /usr/local/opt/postgresql/homebrew.mxcl.postgresql.plist"
-alias pgoff="launchctl unload -w /usr/local/opt/postgresql/homebrew.mxcl.postgresql.plist"
 
 # Turn IPV6 on Wifi on and off
 alias ipv6on="networksetup -setv6automatic Wi-Fi"

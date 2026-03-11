@@ -87,6 +87,3 @@ ln -s "${dotfiles_repo}/vscode/keybindings.json" "${HOME}/Library/Application Su
 # https://github.com/electron/electron/issues/2617#issuecomment-571447707
 mkdir "${HOME}/Library/Keybindings"
 ln -s "${dotfiles_repo}/macos/DefaultKeyBinding.dict" "${HOME}/Library/KeyBindings/DefaultKeyBinding.dict"
-
-# Symlink macOS system settings
-ln -s "${dotfiles_repo}/macos/plist/com.${USER}.airportoff.plist" "${HOME}/Library/LaunchAgents/com.${USER}.airportoff.plist"
