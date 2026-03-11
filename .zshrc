@@ -114,5 +114,3 @@ for file in ~/.{path,exports,aliases,completions,functions,extra}; do
 done;
 unset file;
 
-# Added by Windsurf
-export PATH="/Users/billmei/.codeium/windsurf/bin:$PATH"
