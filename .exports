@@ -10,6 +10,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 
 # Make vim the default editor.
+export VISUAL='vim';
 export EDITOR='vim';
 
 # Enable persistent REPL history for `node`.
