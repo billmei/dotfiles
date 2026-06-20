@@ -1,5 +1,6 @@
 # Jump quickly to directories
-CDPATH=".:/Users/${USER}/gdrive/github"
+CDPATH=".:${HOME}/gdrive/github"
+alias investing="${HOME}/gdrive/investing/investing-dd-core"
 
 # Git Shortcuts
 alias gs="git status"
