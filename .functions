@@ -272,7 +272,7 @@ function bookmark() {
     --convert-links \
     --adjust-extension \
     --page-requisites \
-    --directory-prefix="/Users/${USER}/Dropbox/Junkyard/bookmarks" \
+    --directory-prefix="/Volumes/gdrive-encrypted/Junkyard/bookmarks" \
     "$@"
 }
 
@@ -280,7 +280,7 @@ function bookmark() {
 # Stores the output in the Junkyard folder.
 function yt-bookmark() {
   youtube-dl \
-    -o "/Users/${USER}/Dropbox/Junkyard/videos/%(title)s - %(id)s.%(ext)s" \
+    -o "/Volumes/gdrive-encrypted/Junkyard/videos/%(title)s - %(id)s.%(ext)s" \
     "$@"
 }
 

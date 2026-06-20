@@ -1,5 +1,5 @@
 # Jump quickly to directories
-CDPATH=".:/Users/${USER}/Dropbox/github"
+CDPATH=".:/Users/${USER}/gdrive/github"
 
 # Git Shortcuts
 alias gs="git status"
@@ -13,7 +13,7 @@ alias pull='git pull origin $(git symbolic-ref --short -q HEAD)'
 alias push='git push -u origin $(git symbolic-ref --short -q HEAD)'
 
 # Text to speech
-alias tts='(cd /Users/billmei/Dropbox/github/ai-scripts && source venv/bin/activate && python one-off-scripts/text-to-speech.py)'
+alias tts='(cd /Users/billmei/gdrive/github/ai-scripts && source venv/bin/activate && python one-off-scripts/text-to-speech.py)'
 
 # Interactive rebase with the given number of latest commits
 function rebase() {
@@ -65,7 +65,7 @@ alias unix="gdate -u +\"%s\""
 
 # Stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
-alias stopwatch="/Users/${USER}/Dropbox/github/dotfiles/scripts/stopwatch.sh"
+alias stopwatch="/Users/${USER}/gdrive/github/dotfiles/scripts/stopwatch.sh"
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
