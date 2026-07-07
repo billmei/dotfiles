@@ -15,9 +15,9 @@
 // blank in the PDF) by promoting those attributes and scrolling the whole page
 // once to wake up lazy loaders.
 //
-// This file is the readable source. The minified one-line `javascript:` URL you
-// actually drag into your bookmarks bar lives in README.md — regenerate it from
-// this file whenever you edit here.
+// This file is the readable source. The installable one-line `javascript:` URL
+// is compiled to bookmark-pdf-min.js by build.js — run `./build.js` after
+// editing here, and paste that -min.js file into a bookmark.
 
 (function () {
   // Promote deferred/lazy image sources so they render in the print output.

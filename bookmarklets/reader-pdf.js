@@ -15,9 +15,9 @@
 //   4. "Save as PDF" opens the print dialog showing only the cleaned content —
 //      choose Save as PDF and point it at ~/Dropbox/bookmarks.
 //
-// This is the readable source. The URL-encoded one-line `javascript:` version
-// you drag to your bookmarks bar lives in README.md; regenerate it from this
-// file whenever you edit here.
+// This is the readable source. The installable one-line `javascript:` URL is
+// compiled to reader-pdf-min.js by build.js — run `./build.js` after editing
+// here, and paste that -min.js file into a bookmark.
 
 (function () {
   var OVERLAY_ID = "pf-overlay";
