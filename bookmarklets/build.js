@@ -9,7 +9,7 @@
 // Each `<name>.js` source becomes `<name>-min.js`, whose single line is the
 // `javascript:` URL you paste into a bookmark's location field.
 
-const SOURCES = ["bookmark-pdf", "reader-pdf"];
+const SOURCES = ["reader-pdf"];
 
 // Minify: drop whole-line `//` comments, trim each line, drop blank lines, and
 // join the rest with a single space. The sources deliberately keep every string
