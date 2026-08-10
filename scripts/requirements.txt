@@ -1,0 +1,13 @@
+# Dependencies for transcribe.py (Parakeet ONNX via istupakov/onnx-asr).
+#
+#   pip install -r requirements.txt
+#
+# transcribe.py bootstraps a local .venv and installs these automatically on
+# first run. This file exists for reproducibility / pinning.
+#
+# Requires a Python with onnxruntime wheels available (3.13 works; 3.14 may not
+# yet) and ffmpeg on PATH for audio decoding.
+
+numpy==2.4.4
+onnxruntime==1.25.0
+onnx-asr==0.12.0
