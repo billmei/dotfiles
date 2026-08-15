@@ -1,5 +1,7 @@
 {
+  "model": "opus",
   "tui": "fullscreen",
   "theme": "dark",
-  "switchModelsOnFlag": false
+  "switchModelsOnFlag": false,
+  "effortLevel": "high"
 }
