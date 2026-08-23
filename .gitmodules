@@ -1,3 +1,6 @@
 [submodule ".claude/skills/humanizer"]
 	path = .claude/skills/humanizer
 	url = https://github.com/blader/humanizer.git
+[submodule ".claude/skills/silk-design-no-scrolljack"]
+	path = .claude/skills/silk-design-no-scrolljack
+	url = git@github.com:billmei/silk-design-no-scrolljack.git
