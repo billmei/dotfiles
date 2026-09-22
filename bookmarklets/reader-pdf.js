@@ -10,7 +10,9 @@
 //   1. Scores the page's blocks to find the main article (a compact Readability-
 //      style heuristic) and lifts just that content into a clean overlay.
 //   2. Auto-strips obvious clutter: nav, sidebars, footers, comments, ad/share
-//      /related/newsletter blocks.
+//      /related/newsletter blocks. On Substack (including custom domains) it
+//      also strips the likes/restacks bar, the subscribe box, the comments and
+//      the "Ready for more?" / related-posts sections.
 //   3. Lets you hover + click any remaining block to delete it (with Undo).
 //   4. "Save as PDF" opens the print dialog showing only the cleaned content —
 //      choose Save as PDF and point it at ~/Dropbox/bookmarks.
@@ -29,6 +31,13 @@
   // Class/id substrings that mark non-article clutter.
   var JUNK = /comment|disqus|reply|footnote|sidebar|sponsor|advert|adsense|banner|share|social|related|recommend|newsletter|subscribe|popup|modal|promo|breadcrumb|pagination|cookie|widget|masthead|utility/i;
   var GOOD = /article|content|post|story|entry|main|body|prose|markdown/i;
+
+  // Substack, on *.substack.com or a custom domain (detected by its CDN).
+  var SUBSTACK = /(^|\.)substack\.com$/.test(location.hostname) ||
+    !!document.querySelector('link[href*="substackcdn.com"], script[src*="substackcdn.com"]');
+  // Substack's shared post chrome: like/comment/restack buttons, the "N Likes ∙
+  // N Restacks" facepile, in-post subscribe widgets, comments, related posts.
+  var SUBSTACK_JUNK = ".post-ufi, .post-facepile-container, .subscription-widget-wrap, .subscribe-widget, #discussion, .comments-section, .single-post-section, .portable-archive";
 
   function hintOf(el) {
     return (((el.className && el.className.toString()) || "") + " " + (el.id || ""));
@@ -73,8 +82,25 @@
     if (s > bestScore) { bestScore = s; best = el; }
   });
 
+  // On Substack the post itself is <article class="post">; everything after it
+  // (comments, related posts, "Ready for more?") is chrome.
+  var ssPost = SUBSTACK && document.querySelector("article.newsletter-post, article.post");
+  if (ssPost) best = ssPost;
+
   // Clone the winning block and scrub it.
   var content = best.cloneNode(true);
+  if (SUBSTACK) {
+    // The end-of-post "Subscribe to <pub>" box has only hashed class names, so
+    // find it by its signup form and remove the largest block around it that
+    // doesn't also hold the post body.
+    content.querySelectorAll('form[action*="/api/v1/free"]').forEach(function (f) {
+      if (f.closest(".available-content, .body")) return;
+      var n = f;
+      while (n.parentNode && n.parentNode !== content && !n.parentNode.querySelector(".available-content, .body")) n = n.parentNode;
+      n.remove();
+    });
+    content.querySelectorAll(SUBSTACK_JUNK).forEach(function (n) { n.remove(); });
+  }
   content.querySelectorAll("script,style,noscript,iframe,form,button,input,select,textarea,link,nav,aside,footer").forEach(function (n) {
     n.remove();
   });
