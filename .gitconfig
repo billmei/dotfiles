@@ -148,7 +148,7 @@
 	textconv = hexdump -v -C
 
 [interactive]
-    diffFilter = delta
+	diffFilter = delta --color-only
 
 [delta]
     navigate = true
