@@ -27,7 +27,7 @@ it worth reading.
 
 ## Your task
 
-1. **Run the humanizer skill first.** Invoke `/humanize` (or the `humanizer`
+1. **Run the humanizer skill first.** Invoke `/humanizer` (or the `humanizer`
    skill) on the draft before applying anything below. Strip the AI tells, then
    build.
 2. **Apply the techniques below** to the humanized draft.
