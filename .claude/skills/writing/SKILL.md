@@ -27,15 +27,10 @@ it worth reading.
 
 ## Your task
 
-1. **Run the humanizer skill first.** Invoke `/humanizer` (or the `humanizer`
-   skill) on the draft before applying anything below. Strip the AI tells, then
-   build.
+1. **Run the humanizer skill first.** Invoke the `humanizer` skill (`/humanizer`) on the draft before applying anything below. Strip the AI tells, then build.
 2. **Apply the techniques below** to the humanized draft.
-3. **Never apply all 22 at once.** Pick the ones the draft actually needs.
-   A piece that hits every technique reads like a demo reel.
-4. **Preserve the author's argument.** You are sharpening their point, not
-   substituting yours. If a technique would require inventing a fact, an
-   anecdote, or a source, stop and ask instead.
+3. **Never apply all 22 at once.** Pick the ones the draft actually needs. A piece that hits every technique reads like a demo reel.
+4. **Preserve the author's argument.** You are sharpening their point, not substituting yours. If a technique would require inventing a fact, an anecdote, or a source, stop and ask instead.
 5. **Run the final check** at the bottom of this file before presenting.
 
 ## When humanizer and this skill disagree
