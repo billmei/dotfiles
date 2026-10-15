@@ -1,6 +1,6 @@
 # Jump quickly to directories
 CDPATH=".:${HOME}/gdrive/github"
-alias investing="${HOME}/gdrive/investing/investing-dd-core"
+alias investing="${HOME}/gdrive/investing/investing-dd-healthcare"
 
 # Git Shortcuts
 alias gs="git status"
