@@ -114,3 +114,6 @@ for file in ~/.{path,exports,aliases,completions,prompts,functions,extra}; do
 done;
 unset file;
 
+
+# bun completions
+[ -s "/Users/billmei/.bun/_bun" ] && source "/Users/billmei/.bun/_bun"
